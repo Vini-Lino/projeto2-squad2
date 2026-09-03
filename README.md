@@ -83,21 +83,9 @@ Para o desenvolvimento e gerenciamento do projeto, utilizamos:
 
 O protótipo das interfaces do projeto pode ser acessado abaixo:
 
-🔗 **[LINK PARA O FIGMA OU PROTÓTIPO]**
+🔗 **<a href="[https://github.com](https://www.figma.com/proto/GDDlkCGTN1HnpF0LxuUiA7/Prot%C3%B3tipo---Re-2007-?node-id=1-2&t=fbSvtNjzEuecDC80-1)" target="_blank">Protótipo 1 </a> **
 
 ### Tela Inicial
-
-<p align="center">
-  <img src="assets/screenshots/tela-inicial.png" width="700" alt="Tela inicial do projeto">
-</p>
-
-### [NOME DE OUTRA TELA]
-
-<p align="center">
-  <img src="assets/screenshots/[NOME-DO-ARQUIVO].png" width="700" alt="[DESCRIÇÃO DA TELA]">
-</p>
-
-> As interfaces apresentadas podem sofrer alterações durante o desenvolvimento do projeto.
 
 ---
 
