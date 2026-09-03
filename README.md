@@ -112,12 +112,12 @@ O desenvolvimento do projeto é acompanhado por meio do Jira, permitindo visuali
 ### Board atualizado
 
 <p align="center">
-  <img src="assets/entregaveis-epics.jpg" width="900" alt="Backlog atualizado do projeto">
-  <img src="assets/entregaveis-epics(1).jpg" width="900" alt="Backlog atualizado do projeto">
-  <img src="assets/entregaveis-epics(2).jpg" width="900" alt="Backlog atualizado do projeto">
-  <img src="assets/entregaveis-epics(3).jpg" width="900" alt="Backlog atualizado do projeto">
-  <img src="assets/entregaveis-epics(4).jpg" width="900" alt="Backlog atualizado do projeto">
-  <img src="assets/entregaveis-epics(5).jpg" width="900" alt="Backlog atualizado do projeto">
+  <img src="assets/entregaveis-epics.jpg" width="900">
+  <img src="assets/entregaveis-epics(1).jpg" width="900" >
+  <img src="assets/entregaveis-epics(2).jpg" width="900" >
+  <img src="assets/entregaveis-epics(3).jpg" width="900" >
+  <img src="assets/entregaveis-epics(4).jpg" width="900" >
+  <img src="assets/entregaveis-epics(5).jpg" width="900" >
 </p>
 
 **Última atualização:** [DD/MM/AAAA]
