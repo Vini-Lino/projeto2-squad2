@@ -160,7 +160,8 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 ### Backlog atualizado
 
 <p align="center">
- 
+  <img src="assets/backlog.jpg" width="900">
+</p>
 </p>
 
 **Última atualização:** [DD/MM/AAAA]
