@@ -20,25 +20,25 @@ Desenvolver um jogo educativo de escolhas e consequências voltado ao letramento
 
 ### Objetivos específicos
 
-* [Desenvolver um jogo educativo sobre letramento em IA, baseado em escolhas e consequências.]
-* [Entregar um jogo funcional e validá-lo por meio de testes com usuários.]
-* [Criar um MVP compatível com o conhecimento da equipe, o prazo e as tecnologias disponíveis.]
-* [Promover a compreensão crítica sobre o uso, funcionamento, limites e riscos da IA.]
-* [Concluir e validar o jogo até o final do semestre, em aproximadamente 4 meses.]
+* Desenvolver um jogo educativo sobre letramento em IA, baseado em escolhas e consequências.
+* Entregar um jogo funcional e validá-lo por meio de testes com usuários.
+* Criar um MVP compatível com o conhecimento da equipe, o prazo e as tecnologias disponíveis.
+* Promover a compreensão crítica sobre o uso, funcionamento, limites e riscos da IA.
+* Concluir e validar o jogo até o final do semestre, em aproximadamente 4 meses.
 
 ---
 
 ## 🎮 Sobre o Jogo
 
-**Gênero:** [VISUAL NOVEL / RPG DE ESCOLHAS / OUTRO]
+**Gênero:** VISUAL NOVEL / RPG DE ESCOLHAS / OUTRO
 
-**Tema:** [Letramento em Inteligência Artificial, uso crítico da tecnologia e tomada de decisões.]
+**Tema:** Letramento em Inteligência Artificial, uso crítico da tecnologia e tomada de decisões.
 
-**Ambientação:** [2007, em uma representação inspirada na cultura, tecnologia e estética digital dos anos 2000.]
+**Ambientação:** 2007, em uma representação inspirada na cultura, tecnologia e estética digital dos anos 2000.
 
-**Público-alvo:** [Adolescentes e jovens adultos, incluindo tanto usuários familiarizados com ferramentas de IA quanto pessoas com pouco conhecimento sobre seu funcionamento, limites e riscos.]
+**Público-alvo:** Adolescentes e jovens adultos, incluindo tanto usuários familiarizados com ferramentas de IA quanto pessoas com pouco conhecimento sobre seu funcionamento, limites e riscos.
 
-**Duração estimada:** [Aproximadamente 6 minutos para o MVP.]
+**Duração estimada:** Aproximadamente 6 minutos para o MVP.
 
 ### Sinopse
 
