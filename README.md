@@ -173,7 +173,7 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 * 👤 **[Aline Santos]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
 * 👤 **[Ana Rita Correia]** — [GitHub](github.com/anaritamoura) | [LinkedIn](https://www.linkedin.com/in/anaritamcorreia/en)
 * 👤 **[Gabriel Farias]** — [GitHub](https://github.com/gabrielfariaxs) | [LinkedIn](https://www.linkedin.com/in/gabrielfariaxs)
-* 👤 **[Juan Nunes]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
+* 👤 **[Juan Nunes]** — [GitHub]([LINK]) | 
 * 👤 **[Juliana Freire]** — [GitHub]([LINK]) | [LinkedIn](https://www.linkedin.com/in/juliana-freire-40393685/)
 * 👤 **[Leandro Luís]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
 * 👤 **[Luiz Mario]** — [GitHub](https://github.com/romaiziul) | [LinkedIn](https://www.linkedin.com/in/luiz-mario-moreira)
