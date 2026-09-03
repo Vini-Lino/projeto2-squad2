@@ -42,9 +42,9 @@ Desenvolver um jogo educativo de escolhas e consequências voltado ao letramento
 
 ### Sinopse
 
-[Após uma interação inesperada com uma Inteligência Artificial, uma mulher adulta é transportada de volta para 2007, período em que ainda era adolescente. Para encontrar uma forma de retornar ao presente, ela deverá enfrentar situações e desafios com a ajuda de uma IA que parece saber mais do que deveria.
+Após uma interação inesperada com uma Inteligência Artificial, uma mulher adulta é transportada de volta para 2007, período em que ainda era adolescente. Para encontrar uma forma de retornar ao presente, ela deverá enfrentar situações e desafios com a ajuda de uma IA que parece saber mais do que deveria.
 
-Ao longo da história, o jogador deverá tomar decisões, solucionar desafios e interagir com diferentes recursos de Inteligência Artificial. Suas escolhas permitem explorar, de forma lúdica, possibilidades, limitações e riscos relacionados ao uso dessas tecnologias.]
+Ao longo da história, o jogador deverá tomar decisões, solucionar desafios e interagir com diferentes recursos de Inteligência Artificial. Suas escolhas permitem explorar, de forma lúdica, possibilidades, limitações e riscos relacionados ao uso dessas tecnologias.
 
 ---
 
@@ -160,11 +160,14 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 
 | Integrante   | Papel no Projeto | Principais Responsabilidades |
 | ------------ | ---------------- | ---------------------------- |
-| **[NOME 1]** | [PAPEL]          | [RESPONSABILIDADES]          |
-| **[NOME 2]** | [PAPEL]          | [RESPONSABILIDADES]          |
-| **[NOME 3]** | [PAPEL]          | [RESPONSABILIDADES]          |
-| **[NOME 4]** | [PAPEL]          | [RESPONSABILIDADES]          |
-| **[NOME 5]** | [PAPEL]          | [RESPONSABILIDADES]          |
+| Ana Rita Correia | [PAPEL]          | [RESPONSABILIDADES]          |
+| Gabriel Farias | [PAPEL]          | [RESPONSABILIDADES]          |
+| Juan Nunes | [PAPEL]          | [RESPONSABILIDADES]          |
+| Juliana Freire | [PAPEL]          | [RESPONSABILIDADES]          |
+| Leandro Luís | [PAPEL]          | [RESPONSABILIDADES]          |
+| Luiz Mario | [PAPEL]          | [RESPONSABILIDADES]          |
+| Vinícius Lino | [PAPEL]          | [RESPONSABILIDADES]          |
+| Vitória Santos | [PAPEL]          | [RESPONSABILIDADES]          |
 
 ### Perfis
 
@@ -221,7 +224,7 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 ---
 
 <p align="center">
-  Desenvolvido pela equipe <strong>[NOME DA EQUIPE]</strong> ❤️
+  Desenvolvido pela <strong> equipe 2 </strong> 
 </p>
 
 <p align="center">
