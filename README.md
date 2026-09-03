@@ -154,27 +154,6 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 
 ---
 
-## 🚀 Status do Projeto
-
-### ✅ Concluído
-
-* [ITEM CONCLUÍDO]
-* [ITEM CONCLUÍDO]
-* [ITEM CONCLUÍDO]
-
-### 🔄 Em desenvolvimento
-
-* [ITEM EM DESENVOLVIMENTO]
-* [ITEM EM DESENVOLVIMENTO]
-
-### ⏳ Próximas etapas
-
-* [PRÓXIMA ETAPA]
-* [PRÓXIMA ETAPA]
-* [PRÓXIMA ETAPA]
-
----
-
 # 👥 Equipe
 
 | Integrante   | Papel no Projeto | Principais Responsabilidades |
