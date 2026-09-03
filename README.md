@@ -148,6 +148,9 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 <p align="center">
   <img src="assets/backlog.png" width="900">
 </p>
+<p align="center">
+  <img src="assets/backlog1.png" width="900">
+</p>
 </p>
 
 **Última atualização:** [03/09/2026]
