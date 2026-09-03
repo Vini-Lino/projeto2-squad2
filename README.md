@@ -13,8 +13,7 @@ Pesquisa de usuários 02: <img width="399" height="731" alt="image" src="https:/
 Personas 02: <img width="404" height="656" alt="image" src="https://github.com/user-attachments/assets/907d9cc7-5848-4ac3-bb91-767fdcc2bbc5" />
 Regras formalizadas: <img width="398" height="653" alt="image" src="https://github.com/user-attachments/assets/8fa5ab6d-dd5f-449a-b29f-2c8affe88b4d" />
 Código inicial: <img width="399" height="712" alt="image" src="https://github.com/user-attachments/assets/7345659c-cab4-4927-8f8c-9bfb1595d3e8" />
-
-
-
-
-
+Regras de pontuação: <img width="399" height="671" alt="image" src="https://github.com/user-attachments/assets/df56e10a-d5d0-40fa-84ec-e43e6613b01c" />
+Núcleo em C - Quiz Conceitual: <img width="409" height="787" alt="image" src="https://github.com/user-attachments/assets/6b658364-8158-4ba2-bf80-d070a016061d" />
+Núcleo em C - Cenário de Decisão: <img width="402" height="751" alt="image" src="https://github.com/user-attachments/assets/2f625106-485a-4c0e-8a7d-fd8eb9ac6a96" />
+Núcleo em C - Mini-jogo Viés de Dados: <img width="407" height="739" alt="image" src="https://github.com/user-attachments/assets/ebadc63e-5532-4d72-8210-cc3c3d009b54" />
