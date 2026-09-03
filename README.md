@@ -1,12 +1,12 @@
 # 🎮 [PROJETO INTEGRADOR - TEAM 2]
 
 <p align="center">
-  <strong>[2007 ligou. Você vai atender?]</strong>
+  <strong>2007 ligou. você vai atender?</strong>
 </p>
 
 ## 📖 Sobre o Projeto
 
-**[Re:2007]** é um projeto desenvolvido por estudantes do segundo período de **[ADS]**, da **[CESAR SCHOOL]**, como parte de um projeto integrador que visa utilizar conhecimentos de todas as cadeiras simultaneamente.
+**Re:2007** é um projeto desenvolvido por estudantes do segundo período de **ADS**, da **CESAR SCHOOL**, como parte de um projeto integrador que visa utilizar conhecimentos de todas as cadeiras simultaneamente.
 
 O projeto consiste no desenvolvimento de uma visual novel interativa em linguagem C, na qual o jogador acompanha uma personagem adulta que, com a intervenção de uma Inteligência Artificial, é transportada de volta para 2007 e precisa lidar novamente com situações e escolhas de sua adolescência. A proposta combina narrativa interativa, tomada de decisões e elementos visuais inspirados na estética digital dos anos 2000, buscando dialogar tanto com pessoas que vivenciaram esse período quanto com uma geração mais jovem familiarizada com o retorno da estética Y2K.
 
@@ -16,7 +16,7 @@ Nosso objetivo é desenvolver uma experiência narrativa interativa que explore,
 
 ## 🎯 Objetivo
 
-[Desenvolver um jogo educativo de escolhas e consequências voltado ao letramento crítico em Inteligência Artificial.]
+Desenvolver um jogo educativo de escolhas e consequências voltado ao letramento crítico em Inteligência Artificial.
 
 ### Objetivos específicos
 
