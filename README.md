@@ -83,7 +83,7 @@ Para o desenvolvimento e gerenciamento do projeto, utilizamos:
 
 O protótipo das interfaces do projeto pode ser acessado abaixo:
 
-*  [Acessar protótipo](https://www.figma.com/proto/GDDlkCGTN1HnpF0LxuUiA7/Prot%C3%B3tipo---Re-2007-?node-id=1-2&t=fbSvtNjzEuecDC80-1)
+*  [Acessar protótipo](https://www.figma.com/board/YzFyw4c14ZIFgUF8Eu8Pjm/Projeto-Integrador---Cesar-2026.2?node-id=0-1&t=iAXRReHgs6IUaz6I-1)
 
 ### Tela Inicial
 
