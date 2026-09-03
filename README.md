@@ -128,7 +128,12 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 ### Backlog atualizado
 
 <p align="center">
-  <img src="assets/evidencias/backlog.png" width="900" alt="Backlog atualizado do projeto">
+  <img src="assets/entregaveis-epics.jpg" width="900" alt="Backlog atualizado do projeto">
+  <img src="assets/entregaveis-epics(1).jpg" width="900" alt="Backlog atualizado do projeto">
+  <img src="assets/entregaveis-epics(2).jpg" width="900" alt="Backlog atualizado do projeto">
+  <img src="assets/entregaveis-epics(3).jpg" width="900" alt="Backlog atualizado do projeto">
+  <img src="assets/entregaveis-epics(4).jpg" width="900" alt="Backlog atualizado do projeto">
+  <img src="assets/entregaveis-epics(5).jpg" width="900" alt="Backlog atualizado do projeto">
 </p>
 
 **Última atualização:** [DD/MM/AAAA]
