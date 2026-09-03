@@ -4,10 +4,16 @@ Projeto 2 Cesar School
 
 Setup do repositório: <img width="452" height="711" alt="image" src="https://github.com/user-attachments/assets/53a06277-8cd7-489e-b3d0-dd9f8e6d8ea0" />
 Pesquisa de usuário: <img width="451" height="728" alt="image" src="https://github.com/user-attachments/assets/629bb9ea-0cce-4404-be6f-9cf438bc572d" />
-Levantamento do Backlog inicial: <img width="447" height="713" alt="image" src="https://github.com/user-attachments/assets/6196820b-ab59-4945-882e-0ccc99879743" />
+Levantamento do Backlog inicial: <img width="393" height="662" alt="image" src="https://github.com/user-attachments/assets/c1e22052-bb63-498c-a1f5-c83ee7a244ce" />
 Diagnóstico inicial de organização do time: <img width="457" height="797" alt="image" src="https://github.com/user-attachments/assets/46d1e438-c7a3-4e00-9a92-2950d08acc4b" />
 Personas 01: <img width="453" height="706" alt="image" src="https://github.com/user-attachments/assets/f7b2be23-d80f-47eb-b5b1-f3bae405f84e" />
-Visão/requisitos: <img width="399" height="760" alt="image" src="https://github.com/user-attachments/assets/a2311855-aafc-47f7-a58f-84da066f8c2e" />
+Visão/requisitos: <img width="397" height="767" alt="image" src="https://github.com/user-attachments/assets/7ff97356-08fe-4c15-835e-2e0027c3223c" />
+Project Model Canvas: <img width="398" height="630" alt="image" src="https://github.com/user-attachments/assets/b45e3253-a304-4da8-94f5-8c2e38ed3bcd" />
+Pesquisa de usuários 02: <img width="399" height="731" alt="image" src="https://github.com/user-attachments/assets/781762f9-533a-444b-bdce-476974d6b2ed" />
+Personas 02: <img width="404" height="656" alt="image" src="https://github.com/user-attachments/assets/907d9cc7-5848-4ac3-bb91-767fdcc2bbc5" />
+Regras formalizadas: <img width="398" height="653" alt="image" src="https://github.com/user-attachments/assets/8fa5ab6d-dd5f-449a-b29f-2c8affe88b4d" />
+Código inicial: <img width="399" height="712" alt="image" src="https://github.com/user-attachments/assets/7345659c-cab4-4927-8f8c-9bfb1595d3e8" />
+
 
 
 
