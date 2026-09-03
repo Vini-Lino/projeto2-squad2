@@ -83,7 +83,7 @@ Para o desenvolvimento e gerenciamento do projeto, utilizamos:
 
 O protótipo das interfaces do projeto pode ser acessado abaixo:
 
-**Protótipo 1 [https://www.figma.com/proto/GDDlkCGTN1HnpF0LxuUiA7/Prot%C3%B3tipo---Re-2007-?node-id=1-2&t=fbSvtNjzEuecDC80-1]
+*  [Acessar protótipo](https://www.figma.com/proto/GDDlkCGTN1HnpF0LxuUiA7/Prot%C3%B3tipo---Re-2007-?node-id=1-2&t=fbSvtNjzEuecDC80-1)
 
 ### Tela Inicial
 
@@ -95,7 +95,9 @@ O protótipo das interfaces do projeto pode ser acessado abaixo:
 
 O desenvolvimento do projeto é acompanhado por meio do Jira, permitindo visualizar as tarefas planejadas, em andamento e concluídas pela equipe.
 
-🔗 **[https://csprj-adsr-2p-e2.atlassian.net/jira/software/c/projects/PI2/boards/2?atlOrigin=eyJpIjoiY2Q5MWJiYWI5MDcyNGUwZjlmNzk0YjQyNzQ3NjRhZjYiLCJwIjoiaiJ9]**
+
+
+🔗  [JIRA](https://www.figma.com/proto/GDDlkCGTN1HnpF0LxuUiA7/Prot%C3%B3tipo---Re-2007-?node-id=1-2&t=fbSvtNjzEuecDC80-1) 
 
 ### Board atualizado
 <p align="center">
