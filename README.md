@@ -95,8 +95,6 @@ O protótipo das interfaces do projeto pode ser acessado abaixo:
 
 O desenvolvimento do projeto é acompanhado por meio do Jira, permitindo visualizar as tarefas planejadas, em andamento e concluídas pela equipe.
 
-
-
 🔗  [JIRA](https://www.figma.com/proto/GDDlkCGTN1HnpF0LxuUiA7/Prot%C3%B3tipo---Re-2007-?node-id=1-2&t=fbSvtNjzEuecDC80-1) 
 
 ### Board atualizado
@@ -173,14 +171,14 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 ### Perfis
 
 * 👤 **[Aline Santos]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
-* 👤 **[Ana Rita Correia]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
-* 👤 **[Gabriel Farias]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
+* 👤 **[Ana Rita Correia]** — [GitHub](github.com/anaritamoura) | [LinkedIn](https://www.linkedin.com/in/anaritamcorreia/en)
+* 👤 **[Gabriel Farias]** — [GitHub](https://github.com/gabrielfariaxs) | [LinkedIn](https://www.linkedin.com/in/gabrielfariaxs)
 * 👤 **[Juan Nunes]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
-* 👤 **[Juliana Freire]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
+* 👤 **[Juliana Freire]** — [GitHub]([LINK]) | [LinkedIn](https://www.linkedin.com/in/juliana-freire-40393685/)
 * 👤 **[Leandro Luís]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
-* 👤 **[Luiz Mario]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
+* 👤 **[Luiz Mario]** — [GitHub](https://github.com/romaiziul) | [LinkedIn](https://www.linkedin.com/in/luiz-mario-moreira)
 * 👤 **[Vinícius Lino]** — [GitHub](https://github.com/Vini-Lino) | [LinkedIn]([LINK])
-* 👤 **[Vitória Santos]** — [GitHub](https://github.com/vitoriaSilva94) | [LinkedIn]([LINK])
+* 👤 **[Vitória Santos]** — [GitHub](https://github.com/vitoriaSilva94) | [LinkedIn](https://www.linkedin.com/in/vitoria-rodrigues-493a57248/)
 
 ---
 
