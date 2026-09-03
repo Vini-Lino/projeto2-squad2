@@ -160,14 +160,15 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 
 | Integrante   | Papel no Projeto | Principais Responsabilidades |
 | ------------ | ---------------- | ---------------------------- |
-| Ana Rita Correia | [PAPEL]          | [RESPONSABILIDADES]          |
-| Gabriel Farias | [PAPEL]          | [RESPONSABILIDADES]          |
-| Juan Nunes | [PAPEL]          | [RESPONSABILIDADES]          |
-| Juliana Freire | [DESENVOLVEDOR]          | [RESPONSABILIDADES]          |
-| Leandro Luís | [DESENVOLVEDOR]          | [RESPONSABILIDADES]          |
-| Luiz Mario | [DESENVOLVEDOR]          | [RESPONSABILIDADES]          |
-| Vinícius Lino | [DESENVOLVEDOR]          | [RESPONSABILIDADES]          |
-| Vitória Santos | [PRODUCT OWNER]          | [UX/UI e Narrativa]          |
+| Aline Santos | [GAME DESIGNER]          | [UX/UI e Narrativa]          |
+| Ana Rita Correia | [PRODUCT OWNER]          | [visão do produto e priorização do backlog.]|
+| Gabriel Farias | [DESENVOLVEDOR]          | [desenvolvimento e implementação do produto.]          |
+| Juan Nunes | [DESENVOLVEDOR]          | [desenvolvimento e implementação do produto.]          |
+| Juliana Freire | [SCRUM MASTER]          | [organização do fluxo e acompanhamento das tarefas]|
+| Leandro Luís | [DESENVOLVEDOR]          | [Q/A e Testes]          |
+| Luiz Mario | [DESENVOLVEDOR]          | [desenvolvimento e implementação do produto.]          |
+| Vinícius Lino | [DESENVOLVEDOR]          | [desenvolvimento e implementação do produto.]          |
+| Vitória Santos | [GAME DESIGNER]          | [UX/UI e Narrativa]          |
 
 ### Perfis
 
