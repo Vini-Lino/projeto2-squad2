@@ -198,7 +198,7 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 * 👤 **[Juliana Freire]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
 * 👤 **[Leandro Luís]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
 * 👤 **[Luiz Mario]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
-* 👤 **[Vinícius Lino]** — [GitHub]((https://github.com/Vini-Lino)) | [LinkedIn]([LINK])
+* 👤 **[Vinícius Lino]** — [GitHub](https://github.com/Vini-Lino) | [LinkedIn]([LINK])
 * 👤 **[Vitória Santos]** — [GitHub](https://github.com/vitoriaSilva94) | [LinkedIn]([LINK])
 
 ---
