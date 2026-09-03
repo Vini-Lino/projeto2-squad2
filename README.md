@@ -1,7 +1,7 @@
 # 🎮 [PROJETO INTEGRADOR - TEAM 2]
 
 <p align="center">
-  <strong>2007 ligou. você vai atender?</strong>
+  <strong>2007 ligou, você vai atender?</strong>
 </p>
 
 ## 📖 Sobre o Projeto
