@@ -1,33 +1,30 @@
-# 🎮 [NOME DO PROJETO]
+# 🎮 [PROJETO INTEGRADOR - TEAM 2]
 
 <p align="center">
-  <img src="assets/logo.png" width="300" alt="Logo do projeto">
-</p>
-
-<p align="center">
-  <strong>[SLOGAN OU FRASE CURTA DO PROJETO — OPCIONAL]</strong>
+  <strong>[2007 ligou. Você vai atender?]</strong>
 </p>
 
 ## 📖 Sobre o Projeto
 
-**[NOME DO PROJETO]** é um projeto desenvolvido por estudantes de **[CURSO]**, da **[INSTITUIÇÃO]**, como parte da disciplina/projeto **[NOME DA DISCIPLINA OU PROJETO INTEGRADOR]**.
+**[Re:2007]** é um projeto desenvolvido por estudantes do segundo período de **[ADS]**, da **[CESAR SCHOOL]**, como parte de um projeto integrador que visa utilizar conhecimentos de todas as cadeiras simultaneamente.
 
-O projeto consiste em **[EXPLIQUE EM 2–4 FRASES O QUE ESTÁ SENDO DESENVOLVIDO, QUAL É A IDEIA PRINCIPAL E PARA QUEM O PRODUTO É DESTINADO]**.
+O projeto consiste no desenvolvimento de uma visual novel interativa em linguagem C, na qual o jogador acompanha uma personagem adulta que, com a intervenção de uma Inteligência Artificial, é transportada de volta para 2007 e precisa lidar novamente com situações e escolhas de sua adolescência. A proposta combina narrativa interativa, tomada de decisões e elementos visuais inspirados na estética digital dos anos 2000, buscando dialogar tanto com pessoas que vivenciaram esse período quanto com uma geração mais jovem familiarizada com o retorno da estética Y2K.
 
-Nosso objetivo é **[OBJETIVO PRINCIPAL DO PROJETO]**.
+Nosso objetivo é desenvolver uma experiência narrativa interativa que explore, de forma lúdica, a relação entre tecnologia, escolhas e diferentes perspectivas geracionais, aplicando os conhecimentos de programação e desenvolvimento de software trabalhados ao longo do Projeto Integrador.
 
 ---
 
 ## 🎯 Objetivo
 
-[DESCREVA BREVEMENTE O QUE O GRUPO PRETENDE ALCANÇAR COM O PROJETO.]
+[Desenvolver um jogo educativo de escolhas e consequências voltado ao letramento crítico em Inteligência Artificial.]
 
 ### Objetivos específicos
 
-* [OBJETIVO 1]
-* [OBJETIVO 2]
-* [OBJETIVO 3]
-* [OBJETIVO 4]
+* [Desenvolver um jogo educativo sobre letramento em IA, baseado em escolhas e consequências.]
+* [Entregar um jogo funcional e validá-lo por meio de testes com usuários.]
+* [Criar um MVP compatível com o conhecimento da equipe, o prazo e as tecnologias disponíveis.]
+* [Promover a compreensão crítica sobre o uso, funcionamento, limites e riscos da IA.]
+* [Concluir e validar o jogo até o final do semestre, em aproximadamente 4 meses.]
 
 ---
 
@@ -35,17 +32,19 @@ Nosso objetivo é **[OBJETIVO PRINCIPAL DO PROJETO]**.
 
 **Gênero:** [VISUAL NOVEL / RPG DE ESCOLHAS / OUTRO]
 
-**Tema:** [TEMA]
+**Tema:** [Letramento em Inteligência Artificial, uso crítico da tecnologia e tomada de decisões.]
 
-**Ambientação:** [QUANDO E ONDE O JOGO SE PASSA]
+**Ambientação:** [2007, em uma representação inspirada na cultura, tecnologia e estética digital dos anos 2000.]
 
-**Público-alvo:** [PÚBLICO]
+**Público-alvo:** [Adolescentes e jovens adultos, incluindo tanto usuários familiarizados com ferramentas de IA quanto pessoas com pouco conhecimento sobre seu funcionamento, limites e riscos.]
 
-**Duração estimada:** [DURAÇÃO]
+**Duração estimada:** [Aproximadamente 6 minutos para o MVP.]
 
 ### Sinopse
 
-[ESCREVA AQUI UMA SINOPSE CURTA DO JOGO. EXPLIQUE A PREMISSA SEM PRECISAR CONTAR TODA A HISTÓRIA.]
+[Após uma interação inesperada com uma Inteligência Artificial, uma mulher adulta é transportada de volta para 2007, período em que ainda era adolescente. Para encontrar uma forma de retornar ao presente, ela deverá enfrentar situações e desafios com a ajuda de uma IA que parece saber mais do que deveria.
+
+Ao longo da história, o jogador deverá tomar decisões, solucionar desafios e interagir com diferentes recursos de Inteligência Artificial. Suas escolhas permitem explorar, de forma lúdica, possibilidades, limitações e riscos relacionados ao uso dessas tecnologias.]
 
 ---
 
@@ -53,12 +52,17 @@ Nosso objetivo é **[OBJETIVO PRINCIPAL DO PROJETO]**.
 
 O projeto prevê as seguintes funcionalidades:
 
-* 🎭 [FUNCIONALIDADE 1]
-* 💬 [FUNCIONALIDADE 2]
-* 🎮 [FUNCIONALIDADE 3]
-* 🖼️ [FUNCIONALIDADE 4]
-* 🎵 [FUNCIONALIDADE 5]
-* 💾 [FUNCIONALIDADE 6]
+* 💬 **Sistema de diálogos:** progressão da narrativa por meio de diálogos entre personagens e interação com a IA.
+
+* 🔀 **Sistema de escolhas e consequências:** decisões tomadas pelo jogador podem alterar diálogos, acontecimentos e o desenvolvimento da narrativa.
+
+* 🧩 **Minijogos e desafios interativos:** atividades integradas à história que apresentam diferentes situações relacionadas ao uso e funcionamento da Inteligência Artificial.
+
+* 🤖 **Interações voltadas ao letramento em IA:** situações que abordam possibilidades, limitações e riscos da tecnologia dentro do contexto da narrativa.
+
+* 🖥️ **Ambientação inspirada em 2007:** cenários e interfaces baseados na estética, cultura e tecnologias digitais dos anos 2000.
+
+* 📊 **Feedback das decisões:** apresentação das consequências das escolhas e do desempenho nos desafios, incentivando a reflexão sobre as decisões tomadas.
 
 ---
 
@@ -66,12 +70,12 @@ O projeto prevê as seguintes funcionalidades:
 
 Para o desenvolvimento e gerenciamento do projeto, utilizamos:
 
-* **C** — [EXPLIQUE COMO/ONDE É UTILIZADO];
-* **Raylib** — [EXPLIQUE COMO/ONDE É UTILIZADA];
-* **Figma** — [EXPLIQUE COMO/ONDE É UTILIZADO];
+* **C** — linguagem de programação utilizada para o desenvolvimento da lógica e das funcionalidades do jogo;
+* **Raylib** — biblioteca utilizada para o desenvolvimento da interface gráfica, gerenciamento de imagens, textos, áudio e interações do jogo;
+* **Figma** — utilizado para prototipação das interfaces e definição da identidade visual do jogo;
 * **GitHub** — utilizado para versionamento, armazenamento e colaboração no código do projeto;
-* **[JIRA / TRELLO / GITHUB PROJECTS]** — utilizado para organização das tarefas, backlog e acompanhamento do desenvolvimento;
-* **[OUTRA FERRAMENTA]** — [FINALIDADE].
+* **Jira** — utilizado para organização das tarefas, gerenciamento do backlog e acompanhamento do desenvolvimento;
+* **Canva** — utilizado para criação de elementos gráficos e materiais visuais do projeto.
 
 ---
 
@@ -101,9 +105,9 @@ O protótipo das interfaces do projeto pode ser acessado abaixo:
 
 ## 📋 Project Board
 
-O desenvolvimento do projeto é acompanhado por meio de **[NOME DA FERRAMENTA]**, permitindo visualizar as tarefas planejadas, em andamento e concluídas pela equipe.
+O desenvolvimento do projeto é acompanhado por meio do Jira, permitindo visualizar as tarefas planejadas, em andamento e concluídas pela equipe.
 
-🔗 **[LINK PARA O BOARD]**
+🔗 **[https://csprj-adsr-2p-e2.atlassian.net/jira/software/c/projects/PI2/boards/2?atlOrigin=eyJpIjoiY2Q5MWJiYWI5MDcyNGUwZjlmNzk0YjQyNzQ3NjRhZjYiLCJwIjoiaiJ9]**
 
 ### Board atualizado
 
