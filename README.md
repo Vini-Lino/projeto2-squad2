@@ -110,6 +110,24 @@ O desenvolvimento do projeto é acompanhado por meio do Jira, permitindo visuali
 🔗 **[https://csprj-adsr-2p-e2.atlassian.net/jira/software/c/projects/PI2/boards/2?atlOrigin=eyJpIjoiY2Q5MWJiYWI5MDcyNGUwZjlmNzk0YjQyNzQ3NjRhZjYiLCJwIjoiaiJ9]**
 
 ### Board atualizado
+<p align="center">
+  <img src="assets/00).jpg" width="900">
+</p>
+<p align="center">
+  <img src="assets/01).jpg" width="900">
+</p>
+<p align="center">
+  <img src="assets/02).jpg" width="900">
+</p>
+<p align="center">
+  <img src="assets/03).jpg" width="900">
+</p>
+<p align="center">
+  <img src="assets/04).jpg" width="900">
+</p>
+
+
+### Histórias de Usuário 
 
 <p align="center">
   <img src="assets/entregaveis-epics.jpg" width="900">
@@ -126,6 +144,9 @@ O desenvolvimento do projeto é acompanhado por meio do Jira, permitindo visuali
 <p align="center">
   <img src="assets/entregaveis-epics (4).jpg" width="900">
 </p>
+
+
+
 **Última atualização:** [DD/MM/AAAA]
 
 ---
