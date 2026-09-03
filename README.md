@@ -224,7 +224,7 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 
 * 🎨 **Figma:** [LINK]
 * 📋 **Board:** [LINK]
-* 📝 **Backlog:** (https://csprj-adsr-2p-e2.atlassian.net/jira/software/c/projects/PI2/boards/2/backlog?atlOrigin=eyJpIjoiZDE2MDc4NzYyZDQwNGFmMGI2OWI4Y2I5OTE0NGI5M2UiLCJwIjoiaiJ9)
+* 📝 **Backlog:** https://csprj-adsr-2p-e2.atlassian.net/jira/software/c/projects/PI2/boards/2/backlog?atlOrigin=eyJpIjoiZDE2MDc4NzYyZDQwNGFmMGI2OWI4Y2I5OTE0NGI5M2UiLCJwIjoiaiJ9
 * 💻 **Repositório:** [LINK]
 
 ---
