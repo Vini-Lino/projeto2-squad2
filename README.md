@@ -83,7 +83,7 @@ Para o desenvolvimento e gerenciamento do projeto, utilizamos:
 
 O protótipo das interfaces do projeto pode ser acessado abaixo:
 
-<a href="[URL](https://www.figma.com/proto/GDDlkCGTN1HnpF0LxuUiA7/Prot%C3%B3tipo---Re-2007-?node-id=1-2&t=fbSvtNjzEuecDC80-1)">Protótipo 1</a>
+**Protótipo 1 [https://www.figma.com/proto/GDDlkCGTN1HnpF0LxuUiA7/Prot%C3%B3tipo---Re-2007-?node-id=1-2&t=fbSvtNjzEuecDC80-1]
 
 ### Tela Inicial
 
