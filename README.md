@@ -147,7 +147,7 @@ O desenvolvimento do projeto é acompanhado por meio do Jira, permitindo visuali
 
 
 
-**Última atualização:** [DD/MM/AAAA]
+**Última atualização:** [03/09/2026]
 
 ---
 
@@ -164,7 +164,7 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 </p>
 </p>
 
-**Última atualização:** [DD/MM/AAAA]
+**Última atualização:** [03/09/2026]
 
 ---
 
