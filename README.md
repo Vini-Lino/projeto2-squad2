@@ -83,7 +83,7 @@ Para o desenvolvimento e gerenciamento do projeto, utilizamos:
 
 O protótipo das interfaces do projeto pode ser acessado abaixo:
 
-🔗 **<a href="[https://github.com](https://www.figma.com/proto/GDDlkCGTN1HnpF0LxuUiA7/Prot%C3%B3tipo---Re-2007-?node-id=1-2&t=fbSvtNjzEuecDC80-1)" target="_blank">Protótipo 1 </a> **
+<a href="[URL](https://www.figma.com/proto/GDDlkCGTN1HnpF0LxuUiA7/Prot%C3%B3tipo---Re-2007-?node-id=1-2&t=fbSvtNjzEuecDC80-1)">Protótipo 1</a>
 
 ### Tela Inicial
 
@@ -142,8 +142,6 @@ O desenvolvimento do projeto é acompanhado por meio do Jira, permitindo visuali
 ## 📝 Backlog
 
 O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o desenvolvimento do projeto.
-
-🔗 **[LINK PARA O BACKLOG, SE HOUVER]**
 
 ### Backlog atualizado
 
