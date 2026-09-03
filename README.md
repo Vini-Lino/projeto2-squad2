@@ -163,11 +163,11 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 | Ana Rita Correia | [PAPEL]          | [RESPONSABILIDADES]          |
 | Gabriel Farias | [PAPEL]          | [RESPONSABILIDADES]          |
 | Juan Nunes | [PAPEL]          | [RESPONSABILIDADES]          |
-| Juliana Freire | [PAPEL]          | [RESPONSABILIDADES]          |
-| Leandro Luís | [PAPEL]          | [RESPONSABILIDADES]          |
-| Luiz Mario | [PAPEL]          | [RESPONSABILIDADES]          |
-| Vinícius Lino | [PAPEL]          | [RESPONSABILIDADES]          |
-| Vitória Santos | [PAPEL]          | [RESPONSABILIDADES]          |
+| Juliana Freire | [DESENVOLVEDOR]          | [RESPONSABILIDADES]          |
+| Leandro Luís | [DESENVOLVEDOR]          | [RESPONSABILIDADES]          |
+| Luiz Mario | [DESENVOLVEDOR]          | [RESPONSABILIDADES]          |
+| Vinícius Lino | [DESENVOLVEDOR]          | [RESPONSABILIDADES]          |
+| Vitória Santos | [PRODUCT OWNER]          | [UX/UI e Narrativa]          |
 
 ### Perfis
 
