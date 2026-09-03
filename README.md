@@ -224,7 +224,7 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 ## 🔗 Links Importantes
 
 * 🎨 **Figma:** [Acessar protótipo](https://www.figma.com/files/folder/638223138)
-* 📋 **Board e Backlog:** [Acessar Board]([LINK](https://csprj-adsr-2p-e2.atlassian.net/jira/software/c/projects/PI2/boards/2/backlog?atlOrigin=eyJpIjoiYTM1ZmYxMjlhZWI3NDdhZWFmMzJmMmE3ZDJmOGRkZWUiLCJwIjoiaiJ9))
+* 📋 **Board e Backlog:** [Acessar Board](https://csprj-adsr-2p-e2.atlassian.net/jira/software/c/projects/PI2/boards/2/backlog?atlOrigin=eyJpIjoiYTM1ZmYxMjlhZWI3NDdhZWFmMzJmMmE3ZDJmOGRkZWUiLCJwIjoiaiJ9)
 * 💻 **Repositório:** [Acessar repositório](https://github.com/Vini-Lino/projeto2-squad2)
 
 ---
