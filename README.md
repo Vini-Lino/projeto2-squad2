@@ -207,32 +207,32 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 
 ```text
 📦 projeto
- ┣ 📂 assets
- ┃ ┣ 📂 evidencias
- ┃ ┃ ┣ 📜 board.png
- ┃ ┃ ┗ 📜 backlog.png
- ┃ ┣ 📂 screenshots
- ┃ ┗ 📜 logo.png
- ┣ 📂 src
- ┃ ┗ 📜 [ARQUIVOS DO CÓDIGO]
- ┣ 📜 README.md
- ┗ 📜 [OUTROS ARQUIVOS]
+├── 📂 assets
+│   ├── 📂 evidencias
+│   │   ├── board.png
+│   │   └── backlog.png
+│   ├── 📂 screenshots
+│   └── logo.png
+├── 📂 src
+│   └── [ARQUIVOS DO CÓDIGO]
+├── README.md
+└── [OUTROS ARQUIVOS]
+```
 
 ---
 
 ## 🔗 Links Importantes
 
-* 🎨 **Figma:** [LINK]
-* 📋 **Board:** [LINK]
-* 📝 **Backlog:** https://csprj-adsr-2p-e2.atlassian.net/jira/software/c/projects/PI2/boards/2/backlog?atlOrigin=eyJpIjoiZDE2MDc4NzYyZDQwNGFmMGI2OWI4Y2I5OTE0NGI5M2UiLCJwIjoiaiJ9
-* 💻 **Repositório:** [LINK]
+* 🎨 **Figma:** [Acessar protótipo](https://www.figma.com/files/folder/638223138)
+* 📋 **Board e Backlog:** [Acessar Board]([LINK](https://csprj-adsr-2p-e2.atlassian.net/jira/software/c/projects/PI2/boards/2/backlog?atlOrigin=eyJpIjoiYTM1ZmYxMjlhZWI3NDdhZWFmMzJmMmE3ZDJmOGRkZWUiLCJwIjoiaiJ9))
+* 💻 **Repositório:** [Acessar repositório](https://github.com/Vini-Lino/projeto2-squad2)
 
 ---
 
 <p align="center">
-  Desenvolvido pela <strong> equipe 2 </strong> 
+  Desenvolvido pela <strong>Equipe 2</strong>
 </p>
 
 <p align="center">
-  [CESAR SCHOOL] • [ADS] • [2026]
+  CESAR School • ADS • 2026
 </p>
