@@ -123,7 +123,7 @@ O desenvolvimento do projeto é acompanhado por meio do Jira, permitindo visuali
   <img src="assets/03.jpg" width="900">
 </p>
 <p align="center">
-  <img src="assets/04.jpg" width="900">
+  <img src="assets/04.jpeg" width="900">
 </p>
 
 
