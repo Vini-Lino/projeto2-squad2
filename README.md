@@ -111,19 +111,19 @@ O desenvolvimento do projeto é acompanhado por meio do Jira, permitindo visuali
 
 ### Board atualizado
 <p align="center">
-  <img src="assets/00).jpg" width="900">
+  <img src="assets/00.jpg" width="900">
 </p>
 <p align="center">
-  <img src="assets/01).jpg" width="900">
+  <img src="assets/01.jpg" width="900">
 </p>
 <p align="center">
-  <img src="assets/02).jpg" width="900">
+  <img src="assets/02.jpg" width="900">
 </p>
 <p align="center">
-  <img src="assets/03).jpg" width="900">
+  <img src="assets/03.jpg" width="900">
 </p>
 <p align="center">
-  <img src="assets/04).jpg" width="900">
+  <img src="assets/04.jpg" width="900">
 </p>
 
 
