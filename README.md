@@ -191,11 +191,15 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 
 ### Perfis
 
-* 👤 **[NOME 1]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
-* 👤 **[NOME 2]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
-* 👤 **[NOME 3]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
-* 👤 **[NOME 4]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
-* 👤 **[NOME 5]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
+* 👤 **[Aline Santos]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
+* 👤 **[Ana Rita Correia]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
+* 👤 **[Gabriel Farias]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
+* 👤 **[Juan Nunes]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
+* 👤 **[Juliana Freire]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
+* 👤 **[Leandro Luís]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
+* 👤 **[Luiz Mario]** — [GitHub]([LINK]) | [LinkedIn]([LINK])
+* 👤 **[Vinícius Lino]** — [GitHub]((https://github.com/Vini-Lino)) | [LinkedIn]([LINK])
+* 👤 **[Vitória Santos]** — [GitHub](https://github.com/vitoriaSilva94) | [LinkedIn]([LINK])
 
 ---
 
@@ -213,22 +217,6 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
  ┃ ┗ 📜 [ARQUIVOS DO CÓDIGO]
  ┣ 📜 README.md
  ┗ 📜 [OUTROS ARQUIVOS]
-```
-
----
-
-## 📌 Evidências do Desenvolvimento
-
-| Evidência                          |    Status    |
-| ---------------------------------- | :----------: |
-| Repositório público                |       ✅      |
-| README organizado                  |       ✅      |
-| Papéis dos integrantes registrados |       ✅      |
-| Board atualizado                   |       ✅      |
-| Backlog atualizado                 |       ✅      |
-| Protótipo                          | [✅ / 🔄 / ⏳] |
-| Implementação                      | [✅ / 🔄 / ⏳] |
-| Testes                             | [✅ / 🔄 / ⏳] |
 
 ---
 
@@ -236,10 +224,8 @@ O backlog reúne as funcionalidades, requisitos e tarefas planejadas para o dese
 
 * 🎨 **Figma:** [LINK]
 * 📋 **Board:** [LINK]
-* 📝 **Backlog:** [LINK]
+* 📝 **Backlog:** (https://csprj-adsr-2p-e2.atlassian.net/jira/software/c/projects/PI2/boards/2/backlog?atlOrigin=eyJpIjoiZDE2MDc4NzYyZDQwNGFmMGI2OWI4Y2I5OTE0NGI5M2UiLCJwIjoiaiJ9)
 * 💻 **Repositório:** [LINK]
-* 🌐 **Landing Page:** [LINK, SE HOUVER]
-* 📄 **Documentação:** [LINK, SE HOUVER]
 
 ---
 
