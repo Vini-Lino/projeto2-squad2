@@ -104,35 +104,15 @@ O desenvolvimento do projeto é acompanhado por meio do Jira, permitindo visuali
 
 ## 📚 Épicos e Histórias de Usuário
 
-### 🎮 EPIC 1 — Menu e Controle de Sessão
-- **US01 — Iniciar novo jogo:** Como jogador, quero iniciar um novo jogo pelo menu principal, para começar a experiência.
-- **US14 — Sair ou retornar ao menu:** Como jogador, quero acessar uma opção para sair ou retornar ao menu, para controlar quando encerro a experiência.
-
-### ⏳ EPIC 2 — Introdução e Viagem no Tempo
-- **US02 — Introdução da protagonista:** Como jogador, quero visualizar uma introdução que apresente a protagonista e sua situação atual, para compreender o contexto da história.
-- **US03 — Transporte para 2007:** Como jogador, quero acompanhar o transporte da protagonista para 2007, para compreender a premissa central do jogo.
-
-### 💬 EPIC 3 — Sistema de Diálogo e Narrativa
-- **US04 — Caixa de diálogo:** Como jogador, quero ler diálogos em uma caixa de texto identificando quem está falando, para acompanhar a narrativa com clareza.
-- **US05 — Avançar diálogos:** Como jogador, quero avançar os diálogos por meio de um comando, para controlar o ritmo da leitura.
-- **US06 — Interação com a IA:** Como jogador, quero interagir com a IA durante a história, para receber informações e orientações sobre a situação da protagonista.
-
-### 🔀 EPIC 4 — Escolhas e Consequências Narrativas
-- **US07 — Escolhas e consequências:** Como jogador, quero que minhas escolhas alterem os diálogos ou acontecimentos seguintes, para perceber consequências nas minhas decisões.
-- **US15 — Desfecho:** Como jogador, quero chegar a um desfecho influenciado pelas escolhas realizadas, para perceber o impacto das minhas decisões.
-- **US16 — Encerramento:** Como jogador, quero visualizar uma tela de encerramento ao concluir a história, para identificar claramente que completei a experiência.
-
-### 💿 EPIC 5 — Exploração de Cenários de 2007
-- **US08 — Exploração do quarto:** Como jogador, quero explorar o quarto da protagonista em 2007, para descobrir elementos da época e informações sobre sua vida.
-- **US09 — Ambiente escolar:** Como jogador, quero vivenciar uma cena no ambiente escolar de 2007, para experimentar uma parte importante da rotina da protagonista.
-- **US10 — Tecnologia e cultura dos anos 2000:** Como jogador, quero interagir com objetos relacionados à tecnologia e cultura dos anos 2000, para reforçar a ambientação histórica e nostálgica.
-
-### 🖱️ EPIC 6 — Interface e Usabilidade
-- **US11 — Feedback visual:** Como jogador, quero receber feedback visual quando posicionar ou clicar em uma opção interativa, para saber que ela pode ser selecionada.
-
-### 🎧 EPIC 7 — Áudio e Imersão
-- **US12 — Música ambiente:** Como jogador, quero ouvir música ambiente adequada às cenas, para aumentar minha imersão na narrativa.
-- **US13 — Efeitos sonoros:** Como jogador, quero ouvir efeitos sonoros associados a acontecimentos e interações, para tornar a experiência mais imersiva.
+| Épico | Histórias |
+|---|---|
+| 🎮 **Menu e Controle de Sessão** | `US01` Novo jogo • `US14` Sair/retornar ao menu |
+| ⏳ **Introdução e Viagem no Tempo** | `US02` Introdução • `US03` Transporte para 2007 |
+| 💬 **Diálogo e Narrativa** | `US04` Caixa de diálogo • `US05` Avançar diálogos • `US06` Interação com IA |
+| 🔀 **Escolhas e Consequências** | `US07` Escolhas e consequências • `US15` Desfecho • `US16` Encerramento |
+| 💿 **Exploração de 2007** | `US08` Quarto • `US09` Escola • `US10` Tecnologia e cultura |
+| 🖱️ **Interface e Usabilidade** | `US11` Feedback visual |
+| 🎧 **Áudio e Imersão** | `US12` Música ambiente • `US13` Efeitos sonoros |
 
 ---
 
