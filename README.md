@@ -96,7 +96,7 @@ O protótipo das interfaces do projeto pode ser acessado abaixo:
 O desenvolvimento do projeto é acompanhado por meio do Jira, permitindo visualizar as tarefas planejadas, em andamento e concluídas pela equipe.
 
 🔗  [JIRA](https://www.figma.com/proto/GDDlkCGTN1HnpF0LxuUiA7/Prot%C3%B3tipo---Re-2007-?node-id=1-2&t=fbSvtNjzEuecDC80-1) 
-🔗  [TRELLO](https://trello.com/invite/b/6a9a0a51e1e79be3ae9803b1/ATTId62108d74291823b1e3f6d9b040016c020E9BD39/re7) 
+🔗  [TRELLO](https://trello.com/b/t0u8Iplf) 
 
 **Última atualização:** [03/09/2026]
 
@@ -207,7 +207,7 @@ O desenvolvimento do projeto é acompanhado por meio do Jira, permitindo visuali
 ## 🔗 Links Importantes
 
 * 🎨 **Figma:** [Acessar protótipo](https://www.figma.com/board/YzFyw4c14ZIFgUF8Eu8Pjm/Projeto-Integrador---Cesar-2026.2?node-id=0-1&t=iAXRReHgs6IUaz6I-1)
-* 📋 **Board e Backlog:** [Acessar Board](https://trello.com/invite/b/6a9a0a51e1e79be3ae9803b1/ATTId62108d74291823b1e3f6d9b040016c020E9BD39/re7)
+* 📋 **Board e Backlog:** [Acessar Board](https://trello.com/b/t0u8Iplf)
 * 💻 **Repositório:** [Acessar repositório](https://github.com/Vini-Lino/projeto2-squad2)
 
 ---
