@@ -104,16 +104,58 @@ O desenvolvimento do projeto é acompanhado por meio do Jira, permitindo visuali
 
 ## 📚 Épicos e Histórias de Usuário
 
-| Épico | Histórias |
-|---|---|
-| 🎮 **Menu e Controle de Sessão** | `US01` Novo jogo • `US14` Sair/retornar ao menu |
-| ⏳ **Introdução e Viagem no Tempo** | `US02` Introdução • `US03` Transporte para 2007 |
-| 💬 **Diálogo e Narrativa** | `US04` Caixa de diálogo • `US05` Avançar diálogos • `US06` Interação com IA |
-| 🔀 **Escolhas e Consequências** | `US07` Escolhas e consequências • `US15` Desfecho • `US16` Encerramento |
-| 💿 **Exploração de 2007** | `US08` Quarto • `US09` Escola • `US10` Tecnologia e cultura |
-| 🖱️ **Interface e Usabilidade** | `US11` Feedback visual |
-| 🎧 **Áudio e Imersão** | `US12` Música ambiente • `US13` Efeitos sonoros |
+**Status:** ⏳ A fazer • 🔄 Em andamento • ✅ Concluído
 
+### 🎮 EPIC 1 — Menu e Controle de Sessão
+
+| Story | Descrição | Status |
+|---|---|:---:|
+| `US01` | Iniciar novo jogo | ⏳ |
+| `US14` | Sair ou retornar ao menu | ⏳ |
+
+### ⏳ EPIC 2 — Introdução e Viagem no Tempo
+
+| Story | Descrição | Status |
+|---|---|:---:|
+| `US02` | Introdução da protagonista | ⏳ |
+| `US03` | Transporte para 2007 | ⏳ |
+
+### 💬 EPIC 3 — Sistema de Diálogo e Narrativa
+
+| Story | Descrição | Status |
+|---|---|:---:|
+| `US04` | Caixa de diálogo com identificação do falante | ⏳ |
+| `US05` | Avançar diálogos por comando | ⏳ |
+| `US06` | Interagir com a IA durante a história | ⏳ |
+
+### 🔀 EPIC 4 — Escolhas e Consequências Narrativas
+
+| Story | Descrição | Status |
+|---|---|:---:|
+| `US07` | Escolhas alteram diálogos ou acontecimentos | ⏳ |
+| `US15` | Desfecho influenciado pelas escolhas | ⏳ |
+| `US16` | Tela de encerramento | ⏳ |
+
+### 💿 EPIC 5 — Exploração de Cenários de 2007
+
+| Story | Descrição | Status |
+|---|---|:---:|
+| `US08` | Explorar o quarto da protagonista | ⏳ |
+| `US09` | Cena no ambiente escolar | ⏳ |
+| `US10` | Tecnologia e cultura dos anos 2000 | ⏳ |
+
+### 🖱️ EPIC 6 — Interface e Usabilidade
+
+| Story | Descrição | Status |
+|---|---|:---:|
+| `US11` | Feedback visual em opções interativas | ⏳ |
+
+### 🎧 EPIC 7 — Áudio e Imersão
+
+| Story | Descrição | Status |
+|---|---|:---:|
+| `US12` | Música ambiente por cena | ⏳ |
+| `US13` | Efeitos sonoros de interações e eventos | ⏳ |
 ---
 
 # 👥 Equipe
