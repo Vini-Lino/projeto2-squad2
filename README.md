@@ -113,7 +113,7 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US01` | Iniciar novo jogo | [Diagrama](docs/diagramas/US01-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=9%3A5&show-proto-sidebar=1) | ⏳ |
+| `US01` | Iniciar novo jogo | [Diagrama](docs/diagramas/US01-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=11%3A10&show-proto-sidebar=1) | ⏳ |
 | `US14` | Sair ou retornar ao menu | — | — | ⏳ |
 
 ---
@@ -122,8 +122,8 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US02` | Introdução da protagonista | [Diagrama](docs/diagramas/US02-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US02/) | ⏳ |
-| `US03` | Transporte para 2007 | [Diagrama](docs/diagramas/US03-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US03/) | ⏳ |
+| `US02` | Introdução da protagonista | [Diagrama](docs/diagramas/US02-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=8%3A6&show-proto-sidebar=1) | ⏳ |
+| `US03` | Transporte para 2007 | [Diagrama](docs/diagramas/US03-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/design/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo---FDS---Entrega-2?node-id=8-8&t=vSc3FPiyOPwirv8F-4) | ⏳ |
 
 ---
 
@@ -131,9 +131,9 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US04` | Caixa de diálogo com identificação do falante | [Diagrama](docs/diagramas/US04-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US04/) | ⏳ |
-| `US05` | Avançar diálogos por comando | [Diagrama](docs/diagramas/US05-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US05/) | ⏳ |
-| `US06` | Interagir com a IA durante a história | [Diagrama](docs/diagramas/US06-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US06/) | ⏳ |
+| `US04` | Caixa de diálogo com identificação do falante | [Diagrama](docs/diagramas/US04-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A42&show-proto-sidebar=1) | ⏳ |
+| `US05` | Avançar diálogos por comando | [Diagrama](docs/diagramas/US05-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A41&show-proto-sidebar=1) | ⏳ |
+| `US06` | Interagir com a IA durante a história | [Diagrama](docs/diagramas/US06-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=11%3A12&show-proto-sidebar=1) | ⏳ |
 
 ---
 
@@ -141,7 +141,7 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US07` | Escolhas alteram diálogos ou acontecimentos | [Diagrama](docs/diagramas/US07-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US07/) | ⏳ |
+| `US07` | Escolhas alteram diálogos ou acontecimentos | [Diagrama](docs/diagramas/US07-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A14&show-proto-sidebar=1) | ⏳ |
 | `US15` | Desfecho influenciado pelas escolhas | — | — | ⏳ |
 | `US16` | Tela de encerramento | — | — | ⏳ |
 
@@ -151,9 +151,9 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US08` | Explorar o quarto da protagonista | [Diagrama](docs/diagramas/US08-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US08/) | ⏳ |
-| `US09` | Cena no ambiente escolar | [Diagrama](docs/diagramas/US09-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US09/) | ⏳ |
-| `US10` | Tecnologia e cultura dos anos 2000 | [Diagrama](docs/diagramas/US10-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US10/) | ⏳ |
+| `US08` | Explorar o quarto da protagonista | [Diagrama](docs/diagramas/US08-diagrama-atividades.png) | [Lo-Fi]([docs/prototipos/US08/](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A5&show-proto-sidebar=1)) | ⏳ |
+| `US09` | Cena no ambiente escolar | [Diagrama](docs/diagramas/US09-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A19&show-proto-sidebar=1) | ⏳ |
+| `US10` | Tecnologia e cultura dos anos 2000 | [Diagrama](docs/diagramas/US10-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A20&show-proto-sidebar=1) | ⏳ |
 
 ---
 
