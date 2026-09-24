@@ -151,7 +151,7 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US08` | Explorar o quarto da protagonista | [Diagrama](docs/diagramas/US08-diagrama-atividades.png) | [Lo-Fi]([docs/prototipos/US08/](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A5&show-proto-sidebar=1)) | ⏳ |
+| `US08` | Explorar o quarto da protagonista | [Diagrama](docs/diagramas/US08-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=ozYy6Xxx5UzFB3RU-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A5&show-proto-sidebar=1) | ⏳ |
 | `US09` | Cena no ambiente escolar | [Diagrama](docs/diagramas/US09-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A19&show-proto-sidebar=1) | ⏳ |
 | `US10` | Tecnologia e cultura dos anos 2000 | [Diagrama](docs/diagramas/US10-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A20&show-proto-sidebar=1) | ⏳ |
 
