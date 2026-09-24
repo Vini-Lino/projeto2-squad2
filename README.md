@@ -109,58 +109,68 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 **Status:** ⏳ A fazer • 🔄 Em andamento • ✅ Concluído
 
-### 🎮 EPIC 1 — Menu e Controle de Sessão
-
-| Story | Descrição | Status |
-|---|---|:---:|
-| `US01` | Iniciar novo jogo | ⏳ |
-| `US14` | Sair ou retornar ao menu | ⏳ |
-
-### ⏳ EPIC 2 — Introdução e Viagem no Tempo
-
-| Story | Descrição | Status |
-|---|---|:---:|
-| `US02` | Introdução da protagonista | ⏳ |
-| `US03` | Transporte para 2007 | ⏳ |
-
-### 💬 EPIC 3 — Sistema de Diálogo e Narrativa
-
-| Story | Descrição | Status |
-|---|---|:---:|
-| `US04` | Caixa de diálogo com identificação do falante | ⏳ |
-| `US05` | Avançar diálogos por comando | ⏳ |
-| `US06` | Interagir com a IA durante a história | ⏳ |
-
-### 🔀 EPIC 4 — Escolhas e Consequências Narrativas
-
-| Story | Descrição | Status |
-|---|---|:---:|
-| `US07` | Escolhas alteram diálogos ou acontecimentos | ⏳ |
-| `US15` | Desfecho influenciado pelas escolhas | ⏳ |
-| `US16` | Tela de encerramento | ⏳ |
-
-### 💿 EPIC 5 — Exploração de Cenários de 2007
+## 🎮 EPIC 1 — Menu e Controle de Sessão
 
 | Story | Descrição | Modelagem | Protótipo | Status |
-|---|---|---|---|:---:|
-| `US08` | Explorar o quarto da protagonista | [Diagrama](docs/diagramas/US08/) | [Lo-Fi](docs/prototipos/US08/) | ⏳ |
-| `US09` | Cena no ambiente escolar | [Diagrama](docs/diagramas/US09/) | [Lo-Fi](docs/prototipos/US09/) | ⏳ |
-| `US10` | Tecnologia e cultura dos anos 2000 | [Diagrama](docs/diagramas/US10/) | [Lo-Fi](docs/prototipos/US10/) | ⏳ |
-
-### 🖱️ EPIC 6 — Interface e Usabilidade
-
-| Story | Descrição | Status |
-|---|---|:---:|
-| `US11` | Feedback visual em opções interativas | ⏳ |
-
-### 🎧 EPIC 7 — Áudio e Imersão
-
-| Story | Descrição | Status |
-|---|---|:---:|
-| `US12` | Música ambiente por cena | ⏳ |
-| `US13` | Efeitos sonoros de interações e eventos | ⏳ |
+|---|---|:---:|:---:|:---:|
+| `US01` | Iniciar novo jogo | [Diagrama](docs/diagramas/US01-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US01/) | ⏳ |
+| `US14` | Sair ou retornar ao menu | — | — | ⏳ |
 
 ---
+
+## ⏳ EPIC 2 — Introdução e Viagem no Tempo
+
+| Story | Descrição | Modelagem | Protótipo | Status |
+|---|---|:---:|:---:|:---:|
+| `US02` | Introdução da protagonista | [Diagrama](docs/diagramas/US02-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US02/) | ⏳ |
+| `US03` | Transporte para 2007 | [Diagrama](docs/diagramas/US03-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US03/) | ⏳ |
+
+---
+
+## 💬 EPIC 3 — Sistema de Diálogo e Narrativa
+
+| Story | Descrição | Modelagem | Protótipo | Status |
+|---|---|:---:|:---:|:---:|
+| `US04` | Caixa de diálogo com identificação do falante | [Diagrama](docs/diagramas/US04-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US04/) | ⏳ |
+| `US05` | Avançar diálogos por comando | [Diagrama](docs/diagramas/US05-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US05/) | ⏳ |
+| `US06` | Interagir com a IA durante a história | [Diagrama](docs/diagramas/US06-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US06/) | ⏳ |
+
+---
+
+## 🔀 EPIC 4 — Escolhas e Consequências Narrativas
+
+| Story | Descrição | Modelagem | Protótipo | Status |
+|---|---|:---:|:---:|:---:|
+| `US07` | Escolhas alteram diálogos ou acontecimentos | [Diagrama](docs/diagramas/US07-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US07/) | ⏳ |
+| `US15` | Desfecho influenciado pelas escolhas | — | — | ⏳ |
+| `US16` | Tela de encerramento | — | — | ⏳ |
+
+---
+
+## 💿 EPIC 5 — Exploração de Cenários de 2007
+
+| Story | Descrição | Modelagem | Protótipo | Status |
+|---|---|:---:|:---:|:---:|
+| `US08` | Explorar o quarto da protagonista | [Diagrama](docs/diagramas/US08-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US08/) | ⏳ |
+| `US09` | Cena no ambiente escolar | [Diagrama](docs/diagramas/US09-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US09/) | ⏳ |
+| `US10` | Tecnologia e cultura dos anos 2000 | [Diagrama](docs/diagramas/US10-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US10/) | ⏳ |
+
+---
+
+## 🖱️ EPIC 6 — Interface e Usabilidade
+
+| Story | Descrição | Modelagem | Protótipo | Status |
+|---|---|:---:|:---:|:---:|
+| `US11` | Feedback visual em opções interativas | — | — | ⏳ |
+
+---
+
+## 🎧 EPIC 7 — Áudio e Imersão
+
+| Story | Descrição | Modelagem | Protótipo | Status |
+|---|---|:---:|:---:|:---:|
+| `US12` | Música ambiente por cena | — | — | ⏳ |
+| `US13` | Efeitos sonoros de interações e eventos | — | — | ⏳ |
 
 
 # 🎥 Demonstração da Solução
