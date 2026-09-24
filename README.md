@@ -93,7 +93,7 @@ Para o desenvolvimento e gerenciamento do projeto, utilizamos:
 
 O desenvolvimento do projeto é acompanhado por meio das ferramentas de gerenciamento da equipe, permitindo visualizar as tarefas planejadas, em andamento e concluídas.
 
-🔗 **Jira:** [Acessar Jira](LINK_DO_JIRA)
+🔗 **Jira:** [Acessar Jira](https://csprj-adsr-2p-e2.atlassian.net/jira/software/c/projects/PI2/boards/2/timeline?selectedIssue=PI2-81)
 
 🔗 **Trello:** [Acessar Trello](https://trello.com/b/t0u8Iplf)
 
@@ -151,7 +151,7 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US08` | Explorar o quarto da protagonista | [Diagrama](docs/diagramas/US08-diagrama-atividades.png) | [Lo-Fi]([docs/prototipos/US08/](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A5&show-proto-sidebar=1)) | ⏳ |
+| `US08` | Explorar o quarto da protagonista | [Diagrama](docs/diagramas/US08-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=ozYy6Xxx5UzFB3RU-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A5&show-proto-sidebar=1) | ⏳ |
 | `US09` | Cena no ambiente escolar | [Diagrama](docs/diagramas/US09-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A19&show-proto-sidebar=1) | ⏳ |
 | `US10` | Tecnologia e cultura dos anos 2000 | [Diagrama](docs/diagramas/US10-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A20&show-proto-sidebar=1) | ⏳ |
 
@@ -263,7 +263,7 @@ O vídeo conta com áudio e/ou legenda para auxiliar na compreensão da apresent
 * 🎨 **Figma:** [Acessar no Figma](https://www.figma.com/board/YzFyw4c14ZIFgUF8Eu8Pjm/Projeto-Integrador---Cesar-2026.2?node-id=0-1&t=iAXRReHgs6IUaz6I-1)
 * 🧩 **Diagramas de Atividades:** [Acessar diagramas](docs/diagramas/)
 * 🎥 **Screencast:** [Assistir demonstração](LINK_DO_SCREENCAST)
-* 📋 **Jira:** [Acessar Jira](LINK_DO_JIRA)
+* 📋 **Jira:** [Acessar Jira](https://csprj-adsr-2p-e2.atlassian.net/jira/software/c/projects/PI2/boards/2/timeline?selectedIssue=PI2-81)
 * 📋 **Trello:** [Acessar Board](https://trello.com/b/t0u8Iplf)
 * 💻 **Repositório:** [Acessar repositório](https://github.com/Vini-Lino/projeto2-squad2)
 * 🎨 **Protótipo Lo-fi** [Acessar no Figma](https://www.figma.com/design/SOWkT7Av6D6rrZESX9XgtQ/Prot%25C3%25B3tipo---FDS---Entrega-2?node-id=0-1&p=f&t=5eM9ErLY6lgjw2X2-0)
