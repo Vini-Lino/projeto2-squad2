@@ -181,7 +181,7 @@ A demonstração permite compreender como o jogador navega pela solução, como 
 
 O vídeo conta com áudio e/ou legenda para auxiliar na compreensão da apresentação.
 
-🎬 **Screencast:** [Assistir à demonstração](LINK_DO_SCREENCAST)
+🎬 **Screencast:** [Assistir à demonstração](https://github.com/user-attachments/assets/4a9b2e80-2bd3-4f94-838b-d5ca3ddea1a1)
 
 ---
 
@@ -262,7 +262,7 @@ O vídeo conta com áudio e/ou legenda para auxiliar na compreensão da apresent
 
 * 🎨 **Figma:** [Acessar no Figma](https://www.figma.com/board/YzFyw4c14ZIFgUF8Eu8Pjm/Projeto-Integrador---Cesar-2026.2?node-id=0-1&t=iAXRReHgs6IUaz6I-1)
 * 🧩 **Diagramas de Atividades:** [Acessar diagramas](docs/diagramas/)
-* 🎥 **Screencast:** [Assistir demonstração](LINK_DO_SCREENCAST)
+* 🎥 **Screencast:** [Assistir demonstração](https://github.com/user-attachments/assets/4a9b2e80-2bd3-4f94-838b-d5ca3ddea1a1)
 * 📋 **Jira:** [Acessar Jira](https://csprj-adsr-2p-e2.atlassian.net/jira/software/c/projects/PI2/boards/2/timeline?selectedIssue=PI2-81)
 * 📋 **Trello:** [Acessar Board](https://trello.com/b/t0u8Iplf)
 * 💻 **Repositório:** [Acessar repositório](https://github.com/Vini-Lino/projeto2-squad2)
