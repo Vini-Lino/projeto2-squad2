@@ -115,7 +115,7 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US01` | Iniciar novo jogo | [Diagrama](LINK_DIAGRAMA_US01) | [Lo-Fi](LINK_PROTOTIPO_US01) | ⏳ |
+| `US01` | Iniciar novo jogo | [Diagrama](docs/diagramas/US01-diagrama-atividades.png) | [Lo-Fi](LINK_PROTOTIPO_US01) | ⏳ |
 | `US14` | Sair ou retornar ao menu | — | — | ⏳ |
 
 ---
@@ -124,8 +124,8 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US02` | Introdução da protagonista | [Diagrama](LINK_DIAGRAMA_US02) | [Lo-Fi](LINK_PROTOTIPO_US02) | ⏳ |
-| `US03` | Transporte para 2007 | [Diagrama](LINK_DIAGRAMA_US03) | [Lo-Fi](LINK_PROTOTIPO_US03) | ⏳ |
+| `US02` | Introdução da protagonista | [Diagrama](docs/diagramas/US02-diagrama-atividades.png) | [Lo-Fi](LINK_PROTOTIPO_US02) | ⏳ |
+| `US03` | Transporte para 2007 | [Diagrama](docs/diagramas/US03-diagrama-atividades.png) | [Lo-Fi](LINK_PROTOTIPO_US03) | ⏳ |
 
 ---
 
@@ -133,9 +133,9 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US04` | Caixa de diálogo com identificação do falante | [Diagrama](LINK_DIAGRAMA_US04) | [Lo-Fi](LINK_PROTOTIPO_US04) | ⏳ |
-| `US05` | Avançar diálogos por comando | [Diagrama](LINK_DIAGRAMA_US05) | [Lo-Fi](LINK_PROTOTIPO_US05) | ⏳ |
-| `US06` | Interagir com a IA durante a história | [Diagrama](LINK_DIAGRAMA_US06) | [Lo-Fi](LINK_PROTOTIPO_US06) | ⏳ |
+| `US04` | Caixa de diálogo com identificação do falante | [Diagrama](docs/diagramas/US04-diagrama-atividades.png) | [Lo-Fi](LINK_PROTOTIPO_US04) | ⏳ |
+| `US05` | Avançar diálogos por comando | [Diagrama](docs/diagramas/US05-diagrama-atividades.png) | [Lo-Fi](LINK_PROTOTIPO_US05) | ⏳ |
+| `US06` | Interagir com a IA durante a história | [Diagrama](docs/diagramas/US06-diagrama-atividades.png) | [Lo-Fi](LINK_PROTOTIPO_US06) | ⏳ |
 
 ---
 
@@ -143,7 +143,7 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US07` | Escolhas alteram diálogos ou acontecimentos | [Diagrama](LINK_DIAGRAMA_US07) | [Lo-Fi](LINK_PROTOTIPO_US07) | ⏳ |
+| `US07` | Escolhas alteram diálogos ou acontecimentos | [Diagrama](docs/diagramas/US07-diagrama-atividades.png) | [Lo-Fi](LINK_PROTOTIPO_US07) | ⏳ |
 | `US15` | Desfecho influenciado pelas escolhas | — | — | ⏳ |
 | `US16` | Tela de encerramento | — | — | ⏳ |
 
@@ -153,9 +153,9 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US08` | Explorar o quarto da protagonista | [Diagrama](LINK_DIAGRAMA_US08) | [Lo-Fi](LINK_PROTOTIPO_US08) | ⏳ |
-| `US09` | Cena no ambiente escolar | [Diagrama](LINK_DIAGRAMA_US09) | [Lo-Fi](LINK_PROTOTIPO_US09) | ⏳ |
-| `US10` | Tecnologia e cultura dos anos 2000 | [Diagrama](LINK_DIAGRAMA_US10) | [Lo-Fi](LINK_PROTOTIPO_US10) | ⏳ |
+| `US08` | Explorar o quarto da protagonista | [Diagrama](docs/diagramas/US08-diagrama-atividades.png) | [Lo-Fi](LINK_PROTOTIPO_US08) | ⏳ |
+| `US09` | Cena no ambiente escolar | [Diagrama](docs/diagramas/US09-diagrama-atividades.png) | [Lo-Fi](LINK_PROTOTIPO_US09) | ⏳ |
+| `US10` | Tecnologia e cultura dos anos 2000 | [Diagrama](docs/diagramas/US10-diagrama-atividades.png) | [Lo-Fi](LINK_PROTOTIPO_US10) | ⏳ |
 
 ---
 
