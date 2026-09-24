@@ -238,7 +238,16 @@ O vídeo conta com áudio e/ou legenda para auxiliar na compreensão da apresent
 │   │   └── US10-diagrama-atividades.png
 │   │
 │   └── 📂 prototipos
-│       └── screenshots-lo-fi
+│       ├── 📂 US01
+│       ├── 📂 US02
+│       ├── 📂 US03
+│       ├── 📂 US04
+│       ├── 📂 US05
+│       ├── 📂 US06
+│       ├── 📂 US07
+│       ├── 📂 US08
+│       ├── 📂 US09
+│       └── 📂 US10
 │
 ├── 📂 src
 │   └── [ARQUIVOS DO CÓDIGO]
