@@ -230,7 +230,17 @@ projeto2-squad2/
 │       └── 04.jpeg
 ├── docs/
 │   ├── diagramas/             # US01 a US10
-│   └── prototipos/            # Pastas US01 a US10
+│   └── prototipos/            # Telas Lo-Fi organizadas por história
+│       ├── US01/
+│       ├── US02/
+│       ├── US03/
+│       ├── US04/
+│       ├── US05/
+│       ├── US06/
+│       ├── US07/
+│       ├── US08/
+│       ├── US09/
+│       └── US10/
 ├── src/
 └── README.md
 ```
