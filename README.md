@@ -216,44 +216,23 @@ O vídeo conta com áudio e/ou legenda para auxiliar na compreensão da apresent
 # 📁 Organização do Repositório
 
 ```text
-📦 projeto
-├── 📂 assets
-│   ├── 📂 evidencias
-│   │   ├── board.png
-│   │   └── backlog.png
-│   ├── 📂 screenshots
-│   └── logo.png
-│
-├── 📂 docs
-│   ├── 📂 diagramas
-│   │   ├── US01-diagrama-atividades.png
-│   │   ├── US02-diagrama-atividades.png
-│   │   ├── US03-diagrama-atividades.png
-│   │   ├── US04-diagrama-atividades.png
-│   │   ├── US05-diagrama-atividades.png
-│   │   ├── US06-diagrama-atividades.png
-│   │   ├── US07-diagrama-atividades.png
-│   │   ├── US08-diagrama-atividades.png
-│   │   ├── US09-diagrama-atividades.png
-│   │   └── US10-diagrama-atividades.png
-│   │
-│   └── 📂 prototipos
-│       ├── 📂 US01
-│       ├── 📂 US02
-│       ├── 📂 US03
-│       ├── 📂 US04
-│       ├── 📂 US05
-│       ├── 📂 US06
-│       ├── 📂 US07
-│       ├── 📂 US08
-│       ├── 📂 US09
-│       └── 📂 US10
-│
-├── 📂 src
-│   └── [ARQUIVOS DO CÓDIGO]
-│
-├── README.md
-└── [OUTROS ARQUIVOS]
+projeto2-squad2/
+├── assets/
+│   ├── evidencias/             # Backlog e registros dos épicos
+│   │   ├── backlog.png
+│   │   ├── backlog1.png
+│   │   └── entregaveis-epics*.jpg
+│   └── screenshots/           # Imagens numeradas do projeto
+│       ├── 00.jpg
+│       ├── 01.jpg
+│       ├── 02.jpg
+│       ├── 03.jpg
+│       └── 04.jpeg
+├── docs/
+│   ├── diagramas/             # US01 a US10
+│   └── prototipos/            # Pastas US01 a US10
+├── src/
+└── README.md
 ```
 
 ---
