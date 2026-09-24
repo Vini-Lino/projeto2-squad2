@@ -266,7 +266,7 @@ O vídeo conta com áudio e/ou legenda para auxiliar na compreensão da apresent
 * 📋 **Jira:** [Acessar Jira](LINK_DO_JIRA)
 * 📋 **Trello:** [Acessar Board](https://trello.com/b/t0u8Iplf)
 * 💻 **Repositório:** [Acessar repositório](https://github.com/Vini-Lino/projeto2-squad2)
-* 🎨 **Protótipo Lo-fi** [Acessar no Figma](https://www.figma.com/community/file/1684849776969880963)
+* 🎨 **Protótipo Lo-fi** [Acessar no Figma](https://www.figma.com/design/SOWkT7Av6D6rrZESX9XgtQ/Prot%25C3%25B3tipo---FDS---Entrega-2?node-id=0-1&p=f&t=5eM9ErLY6lgjw2X2-0)
 
 ---
 
