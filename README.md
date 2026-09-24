@@ -113,7 +113,7 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US01` | Iniciar novo jogo | [Diagrama](docs/diagramas/US01-diagrama-atividades.png) | [Lo-Fi](docs/prototipos/US01/) | ⏳ |
+| `US01` | Iniciar novo jogo | [Diagrama](docs/diagramas/US01-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=9%3A5&show-proto-sidebar=1) | ⏳ |
 | `US14` | Sair ou retornar ao menu | — | — | ⏳ |
 
 ---
