@@ -260,12 +260,13 @@ O vídeo conta com áudio e/ou legenda para auxiliar na compreensão da apresent
 
 # 🔗 Links Importantes
 
-* 🎨 **Protótipo Lo-Fi:** [Acessar no Figma](https://www.figma.com/board/YzFyw4c14ZIFgUF8Eu8Pjm/Projeto-Integrador---Cesar-2026.2?node-id=0-1&t=iAXRReHgs6IUaz6I-1)
+* 🎨 **Figma:** [Acessar no Figma](https://www.figma.com/board/YzFyw4c14ZIFgUF8Eu8Pjm/Projeto-Integrador---Cesar-2026.2?node-id=0-1&t=iAXRReHgs6IUaz6I-1)
 * 🧩 **Diagramas de Atividades:** [Acessar diagramas](docs/diagramas/)
 * 🎥 **Screencast:** [Assistir demonstração](LINK_DO_SCREENCAST)
 * 📋 **Jira:** [Acessar Jira](LINK_DO_JIRA)
 * 📋 **Trello:** [Acessar Board](https://trello.com/b/t0u8Iplf)
 * 💻 **Repositório:** [Acessar repositório](https://github.com/Vini-Lino/projeto2-squad2)
+* 🎨 **Protótipo Lo-fi** [Acessar no Figma](https://www.figma.com/design/SOWkT7Av6D6rrZESX9XgtQ/Prot%25C3%25B3tipo---FDS---Entrega-2?node-id=9-42&t=mIePekelbb0kaX9j-0)
 
 ---
 
