@@ -266,7 +266,7 @@ O vídeo conta com áudio e/ou legenda para auxiliar na compreensão da apresent
 * 📋 **Jira:** [Acessar Jira](https://csprj-adsr-2p-e2.atlassian.net/jira/software/c/projects/PI2/boards/2/timeline?selectedIssue=PI2-81)
 * 📋 **Trello:** [Acessar Board](https://trello.com/b/t0u8Iplf)
 * 💻 **Repositório:** [Acessar repositório](https://github.com/Vini-Lino/projeto2-squad2)
-* 🎨 **Protótipo Lo-fi** [Acessar no Figma](https://www.figma.com/design/SOWkT7Av6D6rrZESX9XgtQ/Prot%25C3%25B3tipo---FDS---Entrega-2?node-id=0-1&p=f&t=5eM9ErLY6lgjw2X2-0)
+* 🎨 **Protótipo Lo-fi** [Acessar no Figma](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo---FDS---Entrega-2?node-id=95-194&p=f&t=YOhw8Vmu5wDwYyXY-0&scaling=contain&content-scaling=fixed&page-id=95%3A101&starting-point-node-id=95%3A194&show-proto-sidebar=1)
 
 ---
 
