@@ -1,6 +1,10 @@
 # 🎮 PROJETO INTEGRADOR - TEAM 2
 
 <p align="center">
+  <img src="assets/logo_smalld.png" alt="Logo Re:7" width="250">
+</p>
+
+<p align="center">
   <strong>2007 ligou, você vai atender?</strong>
 </p>
 
