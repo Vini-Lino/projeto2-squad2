@@ -6,6 +6,21 @@
 
 ---
 
+## 📑 Sumário
+
+- [Sobre o Projeto](#sobre)
+- [Gestão do Projeto](#gestao)
+- [Épicos e Histórias de Usuário](#epicos)
+- [Demonstração da Solução](#demonstracao)
+  - [Protótipo Lo-Fi](#prototipo)
+  - [Núcleo do Jogo em C (PIF)](#entrega-pif)
+- [Equipe](#equipe)
+- [Organização do Repositório](#organizacao)
+- [Links Importantes](#links)
+
+---
+
+<a id="sobre"></a>
 ## 📖 Sobre o Projeto
 
 **Re:7** é um projeto desenvolvido por estudantes do segundo período de **ADS**, da **CESAR School**, como parte de um Projeto Integrador que visa utilizar conhecimentos de todas as cadeiras simultaneamente.
@@ -87,6 +102,7 @@ Para o desenvolvimento e gerenciamento do projeto, utilizamos:
 
 ---
 
+<a id="gestao"></a>
 # 📊 Gestão do Projeto
 
 ## 📋 Project Board
@@ -101,6 +117,7 @@ O desenvolvimento do projeto é acompanhado por meio das ferramentas de gerencia
 
 ---
 
+<a id="epicos"></a>
 # 📚 Épicos e Histórias de Usuário
 
 As histórias de usuário representam as principais funcionalidades e experiências previstas para o **Re:7**.
@@ -172,9 +189,12 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 | `US12` | Música ambiente por cena | — | — | ⏳ |
 | `US13` | Efeitos sonoros de interações e eventos | — | — | ⏳ |
 
+---
 
+<a id="demonstracao"></a>
 # 🎥 Demonstração da Solução
 
+<a id="prototipo"></a>
 ## 🧩 Protótipo Lo-Fi
 
 Para demonstrar o funcionamento da solução proposta durante a etapa de prototipação, foi produzido um **screencast** apresentando o fluxo principal da experiência.
@@ -185,6 +205,7 @@ O vídeo conta com áudio e/ou legenda para auxiliar na compreensão da apresent
 
 🎬 **Screencast:** [Assistir à demonstração](https://github.com/user-attachments/assets/50ce844c-50ce-4cf1-9a50-a5752a2afe01)
 
+<a id="entrega-pif"></a>
 ## 🧠 Núcleo do Jogo em C (PIF, Unidade 1)
 
 Visual novel em C com a biblioteca [raylib](https://www.raylib.com/) sobre o uso ético da IA. O jogo é compilado e executado pelo terminal e abre uma janela.
@@ -246,6 +267,7 @@ O vídeo mostra o jogo rodando, o tratamento de erros em ação e a missão comp
 
 ---
 
+<a id="equipe"></a>
 # 👥 Equipe
 
 | Integrante | Papel no Projeto | Principais Responsabilidades |
@@ -274,6 +296,7 @@ O vídeo mostra o jogo rodando, o tratamento de erros em ação e a missão comp
 
 ---
 
+<a id="organizacao"></a>
 # 📁 Organização do Repositório
 
 ```text
@@ -337,15 +360,17 @@ O vídeo mostra o jogo rodando, o tratamento de erros em ação e a missão comp
 
 ---
 
+<a id="links"></a>
 # 🔗 Links Importantes
 
 * 🎨 **Figma:** [Acessar no Figma](https://www.figma.com/board/YzFyw4c14ZIFgUF8Eu8Pjm/Projeto-Integrador---Cesar-2026.2?node-id=0-1&t=iAXRReHgs6IUaz6I-1)
 * 🧩 **Diagramas de Atividades:** [Acessar diagramas](docs/diagramas/)
-* 🎥 **Screencast:** [Assistir demonstração](https://github.com/user-attachments/assets/50ce844c-50ce-4cf1-9a50-a5752a2afe01)
+* 🎥 **Screencast do Protótipo Lo-Fi:** [Assistir demonstração](https://github.com/user-attachments/assets/50ce844c-50ce-4cf1-9a50-a5752a2afe01)
+* 🎥 **Screencast do Núcleo em C (PIF):** [Assistir demonstração](https://drive.google.com/file/d/1cgYbGEYNcb32-t48MkWrdA1o_scuL_fV/view?usp=sharing)
 * 📋 **Jira:** [Acessar Jira](https://csprj-adsr-2p-e2.atlassian.net/jira/software/c/projects/PI2/boards/2?atlOrigin=eyJpIjoiMWEwODM2MTk4OTJhNDA4NDliMWQ0OWIxOGRmMmU0NzciLCJwIjoiaiJ9)
 * 📋 **Trello:** [Acessar Board](https://trello.com/b/t0u8Iplf)
 * 💻 **Repositório:** [Acessar repositório](https://github.com/Vini-Lino/projeto2-squad2)
-* 🎨 **Protótipo Lo-fi** [Acessar no Figma](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo---FDS---Entrega-2?node-id=95-194&p=f&t=YOhw8Vmu5wDwYyXY-0&scaling=contain&content-scaling=fixed&page-id=95%3A101&starting-point-node-id=95%3A194&show-proto-sidebar=1)
+* 🎨 **Protótipo Lo-fi:** [Acessar no Figma](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo---FDS---Entrega-2?node-id=95-194&p=f&t=YOhw8Vmu5wDwYyXY-0&scaling=contain&content-scaling=fixed&page-id=95%3A101&starting-point-node-id=95%3A194&show-proto-sidebar=1)
 
 ---
 
