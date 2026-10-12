@@ -175,6 +175,8 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 # 🎥 Demonstração da Solução
 
+## 🧩 Protótipo Lo-Fi
+
 Para demonstrar o funcionamento da solução proposta durante a etapa de prototipação, foi produzido um **screencast** apresentando o fluxo principal da experiência.
 
 A demonstração permite compreender como o jogador navega pela solução, como as principais interações acontecem e como os fluxos definidos durante a modelagem são representados no protótipo.
@@ -182,6 +184,65 @@ A demonstração permite compreender como o jogador navega pela solução, como 
 O vídeo conta com áudio e/ou legenda para auxiliar na compreensão da apresentação.
 
 🎬 **Screencast:** [Assistir à demonstração](https://github.com/user-attachments/assets/50ce844c-50ce-4cf1-9a50-a5752a2afe01)
+
+## 🧠 Núcleo do Jogo em C (PIF, Unidade 1)
+
+Visual novel em C com a biblioteca [raylib](https://www.raylib.com/) sobre o uso ético da IA. O jogo é compilado e executado pelo terminal e abre uma janela.
+
+O código desta entrega fica em [`entrega_pif/re7`](entrega_pif/re7).
+
+### Requisitos
+
+- Windows com o compilador **GCC** (MinGW-w64, por exemplo o w64devkit)
+- Biblioteca **raylib** instalada para esse compilador
+
+### Como compilar
+
+Abra o terminal na raiz do repositório e entre na pasta do jogo:
+
+```
+cd entrega_pif/re7
+```
+
+Depois compile:
+
+```
+gcc src/*.c -o re7.exe -lraylib -lopengl32 -lgdi32 -lwinmm
+```
+
+O comando deve terminar sem erros nem avisos.
+
+### Como executar
+
+Ainda dentro de `entrega_pif/re7`:
+
+```
+.\re7.exe
+```
+
+> O jogo precisa ser aberto a partir da pasta `entrega_pif/re7`, porque lê as imagens em `assets/`.
+
+### Como jogar
+
+| Tecla | Ação |
+|---|---|
+| Mouse | Clicar nos botões do menu |
+| ESPAÇO | Avançar as falas |
+| ESC | Voltar ao menu (o progresso é salvo) |
+| Minigame (corrida) | ESPAÇO, W ou seta para cima para pular |
+| Minigame (puzzle) | WASD/setas movem, ESPAÇO atira, R reinicia a fase |
+| Tela FIM | ENTER joga de novo, M volta ao menu, ESC sai |
+
+### O que o jogo contém
+
+- **Menu principal:** Novo Jogo, Continuar (usa o save), Créditos e Sair.
+- **Missão jogável do início ao fim:** introdução em 2007, minigame de obstáculos com puzzle de 3 fases e epílogo.
+- **Tratamento de entradas inválidas:** feito com laço `while` na tela final.
+- **Game loop com encerramento controlado:** a tela final pergunta se o jogador quer jogar de novo ou sair.
+
+🎬 **Screencast:** [Assistir à demonstração](https://drive.google.com/file/d/1cgYbGEYNcb32-t48MkWrdA1o_scuL_fV/view?usp=sharing)
+
+O vídeo mostra o jogo rodando, o tratamento de erros em ação e a missão completa sendo jogada.
 
 ---
 
