@@ -217,15 +217,15 @@ O vídeo conta com áudio e/ou legenda para auxiliar na compreensão da apresent
 
 ```text
 📦 projeto
-├── 📂 assets
-│   ├── 📂 evidencias
+├── 📁 assets
+│   ├── 📁 evidencias
 │   │   ├── board.png
 │   │   └── backlog.png
-│   ├── 📂 screenshots
+│   ├── 📁 screenshots
 │   └── logo.png
 │
-├── 📂 docs
-│   ├── 📂 diagramas
+├── 📁 docs
+│   ├── 📁 diagramas
 │   │   ├── US01-diagrama-atividades.png
 │   │   ├── US02-diagrama-atividades.png
 │   │   ├── US03-diagrama-atividades.png
@@ -237,19 +237,37 @@ O vídeo conta com áudio e/ou legenda para auxiliar na compreensão da apresent
 │   │   ├── US09-diagrama-atividades.png
 │   │   └── US10-diagrama-atividades.png
 │   │
-│   └── 📂 prototipos
-│       ├── 📂 US01
-│       ├── 📂 US02
-│       ├── 📂 US03
-│       ├── 📂 US04
-│       ├── 📂 US05
-│       ├── 📂 US06
-│       ├── 📂 US07
-│       ├── 📂 US08
-│       ├── 📂 US09
-│       └── 📂 US10
+│   └── 📁 prototipos
+│       ├── 📁 US01
+│       ├── 📁 US02
+│       ├── 📁 US03
+│       ├── 📁 US04
+│       ├── 📁 US05
+│       ├── 📁 US06
+│       ├── 📁 US07
+│       ├── 📁 US08
+│       ├── 📁 US09
+│       └── 📁 US10
 │
-├── 📂 src
+├── 📁 entrega_pif
+│   └── 📁 re7
+│       ├── 📁 assets
+│       │   ├── 📁 backgrounds
+│       │   ├── 📁 characters
+│       │   └── 📁 ui
+│       ├── 📁 src
+│       │   ├── main.c
+│       │   ├── game.c / game.h
+│       │   ├── scenes.c / scenes.h
+│       │   ├── story.c / story.h
+│       │   ├── minigame.c / minigame.h
+│       │   ├── ui.c / ui.h
+│       │   └── assets.c / assets.h
+│       ├── re7_novo.exe
+│       ├── save.dat
+│       └── recorde.dat
+│
+├── 📁 src
 │   └── [ARQUIVOS DO CÓDIGO]
 │
 ├── README.md
