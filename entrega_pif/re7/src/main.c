@@ -2,6 +2,7 @@
 
 #include "game.h"
 #include "assets.h"
+#include "audio_manager.h"
 
 int main(void)
 {
@@ -12,6 +13,7 @@ int main(void)
         screenWidth,
         screenHeight,
         "Re_7"
+        AudioManagerInit();
     );
 
     SetTargetFPS(60);
@@ -44,13 +46,14 @@ int main(void)
 
     UnloadAssets(&assets);
 
+    AudioManagerClose();
     CloseWindow();
 
     return 0;
 }
 
-/* Iniciar no temrinal:
-gcc src/main.c src/game.c src/ui.c src/scenes.c src/assets.c src/story.c -o re7.exe -IC:/raylib/raylib/src -Isrc -LC:/raylib/raylib/src -lraylib -lopengl32 -lgdi32 -lwinmm
+/* Iniciar no terminal:
+gcc src/main.c src/game.c src/ui.c src/scenes.c src/assets.c src/story.c src/audio_manager.c -o re7.exe -IC:/raylib/raylib/src -Isrc -LC:/raylib/raylib/src -lraylib -lopengl32 -lgdi32 -lwinmm
 
 .\re7.exe
 

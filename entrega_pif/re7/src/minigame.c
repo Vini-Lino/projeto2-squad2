@@ -1,606 +1,492 @@
 /*
- * Minigame de obstaculos + puzzle (adaptado do Mini-game-3-C).
+ * Minigame da visual novel Re:7
+ * Parte 1: voo vertical inspirado em jogos de arcade de desvio.
+ * Parte 2: salas de puzzle solo com caixas, placas, chave e portas.
  *
- * Fluxo: corrida de obstaculos -> (3000 pontos) -> puzzle de 3 fases -> vitoria.
- *
- * Controles:
- *   Corrida: ESPACO, W ou seta para cima para pular
- *   Puzzle:  WASD/setas movem, ESPACO atira, R reinicia a fase
- *   Fim:     ENTER joga de novo, ESC volta ao menu
- *   Vitoria: ENTER continua a historia
- *   ESC em qualquer tela do minigame volta ao menu do jogo.
- *
- * O minigame foi feito para uma janela de 800x450. Ele continua desenhando
- * nessas medidas, e a camera amplia tudo para a janela do jogo (1280x720).
+ * Mantem a API publica usada por game.c: InitMinigame, UpdateMinigame,
+ * DrawMinigame. Desenhado em 800x450 e ampliado para a janela do jogo.
  */
 
 #include "minigame.h"
-
 #include "raylib.h"
-#include <stdbool.h>
-#include <stdio.h>
+
 #include <math.h>
+#include <stdio.h>
 #include <time.h>
 
-#define LARGURA          800
-#define ALTURA           450
-#define CHAO_Y           360
+#define LARGURA 800
+#define ALTURA 450
+#define ARQUIVO_RECORDE "recorde_voo.dat"
 
-#define JOG_X            100.0f
-#define JOG_LARGURA      40.0f
-#define JOG_ALTURA       50.0f
+/* Voo */
+#define JOG_X 170.0f
+#define JOG_LARGURA 34.0f
+#define JOG_ALTURA 28.0f
+#define GRAVIDADE 1250.0f
+#define IMPULSO_VOO 430.0f
+#define VELOCIDADE_INICIAL 245.0f
+#define VELOCIDADE_MAXIMA 360.0f
+#define MAX_PORTAIS 5
+#define LARGURA_PORTAL 64.0f
+#define ABERTURA_MINIMA 145.0f
+#define PORTAIS_PARA_VENCER 9
 
-#define GRAVIDADE        2200.0f
-#define FORCA_PULO       780.0f
-#define VEL_INICIAL      400.0f
-#define VEL_MAXIMA       920.0f
-#define ACELERACAO       20.0f
+/* Salas de puzzle */
+#define TILE 40
+#define GRID_COLS 18
+#define GRID_ROWS 7
+#define AREA_X 40
+#define AREA_Y 90
+#define MAX_PAREDES 32
+#define MAX_CAIXAS 2
+#define PASSO_JOGADOR 0.14f
 
-#define MAX_OBSTACULOS   8
-#define BONUS_OBSTACULO  25.0f
-#define PONTOS_POR_SEG   10.0f
+typedef enum { TELA_VOO, TELA_FIM, TELA_PUZZLE, TELA_VITORIA } Tela;
+typedef enum { VOO_NADA, VOO_COLISAO, VOO_TRANSICAO } ResultadoVoo;
 
-#define ARQUIVO_RECORDE  "recorde.dat"
-
-#define PONTOS_TRANSICAO    3000.0f
-
-#define PUZZLE_AREA_X       40
-#define PUZZLE_AREA_Y       90
-#define PUZZLE_AREA_LARGURA 720
-#define PUZZLE_AREA_ALTURA  300
-#define PUZZLE_VEL          220.0f
-#define BALA_VEL            520.0f
-#define MAX_BLOCOS          6
-#define MAX_BALAS           5
-#define BALAS_POR_FASE      3
-#define TOTAL_FASES         3
-
-/* Qual tela do minigame esta ativa */
-typedef enum { TELA_JOGO, TELA_FIM, TELA_PUZZLE, TELA_VITORIA } Tela;
-/* O que aconteceu na corrida neste quadro */
-typedef enum { RESULTADO_NADA, RESULTADO_COLISAO, RESULTADO_TRANSICAO } ResultadoCorrida;
-/* O que aconteceu no puzzle neste quadro */
-typedef enum { PUZZLE_NADA, PUZZLE_SAIU } ResultadoPuzzle;
-
-/* Jogador da corrida: corpo (posicao e tamanho), velocidade vertical e se esta no chao */
 typedef struct {
-    Rectangle corpo;
-    float velY;
-    bool noChao;
-} Jogador;
-
-/* Obstaculo da corrida; "contado" evita dar o bonus de pontos duas vezes */
-typedef struct {
-    Rectangle corpo;
+    float x;
+    float aberturaY;
+    float aberturaAltura;
     bool ativo;
     bool contado;
-} Obstaculo;
+} Portal;
 
-/* Estado completo da corrida: jogador, obstaculos, velocidade, pontos e chao */
 typedef struct {
-    Jogador jogador;
-    Obstaculo obstaculos[MAX_OBSTACULOS];
-    float velocidade;
+    Rectangle jogador;
+    float velocidadeY;
+    float velocidadeMundo;
     float tempoSpawn;
-    float pontos;
-    float deslocamentoChao;
-} Jogo;
+    float tempo;
+    int portaisPassados;
+    float fundoOffset;
+    Portal portais[MAX_PORTAIS];
+} Voo;
 
-/* ---------- Fase de puzzle ---------- */
-
-typedef struct {
-    Rectangle corpo;
-    Vector2 direcaoOlhar; /* ultima direcao de movimento, usada para mirar */
-} JogadorPuzzle;
+typedef struct { int x, y; } TilePos;
 
 typedef struct {
-    Rectangle corpo;
-    bool quebravel; /* true = destrutivel a tiro, false = parede fixa */
-    bool ativo;
-} Bloco;
-
-typedef struct {
-    Rectangle corpo;
-    Vector2 direcao;
-    bool ativo;
-} Bala;
-
-typedef struct {
-    JogadorPuzzle jogador;
-    Bloco blocos[MAX_BLOCOS];
-    int numBlocos;
-    Bala balas[MAX_BALAS];
-    int balasRestantes;
-    Rectangle saida;
+    TilePos jogador;
+    TilePos caixas[MAX_CAIXAS];
+    int quantidadeCaixas;
+    TilePos paredes[MAX_PAREDES];
+    int quantidadeParedes;
+    TilePos placas[MAX_CAIXAS];
+    int quantidadePlacas;
+    TilePos chave;
+    bool temChave;
+    bool exigeChave;
+    bool chaveColetada;
+    TilePos saida;
+    float tempoPasso;
 } Puzzle;
 
-/* ---------- Estado do minigame (fica guardado entre os quadros) ---------- */
-
-/* Tela atual do minigame */
-static Tela tela = TELA_JOGO;
-/* Estado da corrida de obstaculos */
-static Jogo jogo;
-/* Estado da fase de puzzle atual */
+static Tela tela = TELA_VOO;
+static Voo voo;
 static Puzzle puzzle;
-/* Numero da fase do puzzle (1 a TOTAL_FASES) */
-static int faseAtual = 0;
-/* Melhor pontuacao ja feita (lida de recorde.dat) */
+static int faseAtual = 1;
 static int recorde = 0;
-/* Pontos da ultima corrida, mostrados na tela de fim */
 static int pontuacaoFinal = 0;
-/* true se a ultima corrida bateu o recorde */
 static bool novoRecorde = false;
 
-/* ---------- Recorde ---------- */
-
-/* Le o recorde do arquivo; devolve 0 se o arquivo nao existir */
 static int CarregarRecorde(void)
 {
     int valor = 0;
     FILE *arquivo = fopen(ARQUIVO_RECORDE, "rb");
     if (arquivo != NULL) {
-        if (fread(&valor, sizeof(int), 1, arquivo) != 1) valor = 0;
+        if (fread(&valor, sizeof(valor), 1, arquivo) != 1) valor = 0;
         fclose(arquivo);
     }
     return valor;
 }
 
-/* Grava o recorde no arquivo */
 static void SalvarRecorde(int valor)
 {
     FILE *arquivo = fopen(ARQUIVO_RECORDE, "wb");
     if (arquivo != NULL) {
-        fwrite(&valor, sizeof(int), 1, arquivo);
+        fwrite(&valor, sizeof(valor), 1, arquivo);
         fclose(arquivo);
     }
 }
 
-/* ---------- Logica da corrida ---------- */
-
-/* Volta a corrida ao estado inicial (pontos zerados, sem obstaculos) */
-static void ReiniciarJogo(Jogo *partida)
+static void ReiniciarVoo(void)
 {
-    partida->jogador.corpo = (Rectangle){ JOG_X, CHAO_Y - JOG_ALTURA, JOG_LARGURA, JOG_ALTURA };
-    partida->jogador.velY = 0.0f;
-    partida->jogador.noChao = true;
-
-    for (int i = 0; i < MAX_OBSTACULOS; i++) partida->obstaculos[i].ativo = false;
-
-    partida->velocidade = VEL_INICIAL;
-    partida->tempoSpawn = 1.2f;
-    partida->pontos = 0.0f;
-    partida->deslocamentoChao = 0.0f;
+    voo.jogador = (Rectangle){ JOG_X, ALTURA * 0.5f, JOG_LARGURA, JOG_ALTURA };
+    voo.velocidadeY = 0.0f;
+    voo.velocidadeMundo = VELOCIDADE_INICIAL;
+    voo.tempoSpawn = 0.7f;
+    voo.tempo = 0.0f;
+    voo.portaisPassados = 0;
+    voo.fundoOffset = 0.0f;
+    for (int i = 0; i < MAX_PORTAIS; i++) voo.portais[i].ativo = false;
 }
 
-/* Coloca um novo obstaculo, de tamanho aleatorio, na borda direita da tela */
-static void CriarObstaculo(Jogo *partida)
+static void CriarPortal(void)
 {
-    for (int i = 0; i < MAX_OBSTACULOS; i++) {
-        if (!partida->obstaculos[i].ativo) {
-            float largura = (float)GetRandomValue(24, 50);
-            float altura = (float)GetRandomValue(40, 90);
-            partida->obstaculos[i].corpo = (Rectangle){ LARGURA + 20.0f, CHAO_Y - altura, largura, altura };
-            partida->obstaculos[i].ativo = true;
-            partida->obstaculos[i].contado = false;
-            return;
-        }
+    for (int i = 0; i < MAX_PORTAIS; i++) {
+        if (voo.portais[i].ativo) continue;
+        float minimo = 90.0f;
+        float maximo = ALTURA - 55.0f - ABERTURA_MINIMA;
+        voo.portais[i].x = LARGURA + 20.0f;
+        voo.portais[i].aberturaY = (float)GetRandomValue((int)minimo, (int)maximo);
+        voo.portais[i].aberturaAltura = ABERTURA_MINIMA;
+        voo.portais[i].ativo = true;
+        voo.portais[i].contado = false;
+        return;
     }
 }
 
-/* Retorna o resultado do frame: colisao, transicao para o modo puzzle, ou nada. */
-static ResultadoCorrida AtualizarJogo(Jogo *partida, float tempoQuadro)
+static ResultadoVoo AtualizarVoo(float dt)
 {
-    Jogador *jogador = &partida->jogador;
-
-    bool pediuPulo = IsKeyPressed(KEY_SPACE) || IsKeyPressed(KEY_UP) || IsKeyPressed(KEY_W);
-    if (pediuPulo && jogador->noChao) {
-        jogador->velY = -FORCA_PULO;
-        jogador->noChao = false;
+    if (IsKeyPressed(KEY_SPACE) || IsKeyPressed(KEY_UP) || IsKeyPressed(KEY_W)) {
+        voo.velocidadeY = -IMPULSO_VOO;
     }
 
-    jogador->velY += GRAVIDADE * tempoQuadro;
-    jogador->corpo.y += jogador->velY * tempoQuadro;
-    if (jogador->corpo.y >= CHAO_Y - jogador->corpo.height) {
-        jogador->corpo.y = CHAO_Y - jogador->corpo.height;
-        jogador->velY = 0.0f;
-        jogador->noChao = true;
+    voo.velocidadeY += GRAVIDADE * dt;
+    voo.jogador.y += voo.velocidadeY * dt;
+    voo.tempo += dt;
+    voo.velocidadeMundo += 4.0f * dt;
+    if (voo.velocidadeMundo > VELOCIDADE_MAXIMA) voo.velocidadeMundo = VELOCIDADE_MAXIMA;
+    voo.fundoOffset += voo.velocidadeMundo * 0.28f * dt;
+    if (voo.fundoOffset >= 80.0f) voo.fundoOffset -= 80.0f;
+
+    if (voo.jogador.y < 48.0f || voo.jogador.y + voo.jogador.height > ALTURA - 18.0f) {
+        return VOO_COLISAO;
     }
 
-    partida->velocidade += ACELERACAO * tempoQuadro;
-    if (partida->velocidade > VEL_MAXIMA) partida->velocidade = VEL_MAXIMA;
-
-    partida->pontos += PONTOS_POR_SEG * tempoQuadro;
-    partida->deslocamentoChao += partida->velocidade * tempoQuadro;
-    if (partida->deslocamentoChao >= 60.0f) partida->deslocamentoChao -= 60.0f;
-
-    partida->tempoSpawn -= tempoQuadro;
-    if (partida->tempoSpawn <= 0.0f) {
-        CriarObstaculo(partida);
-        partida->tempoSpawn = 1.0f + (float)GetRandomValue(0, 100) / 100.0f;
+    voo.tempoSpawn -= dt;
+    if (voo.tempoSpawn <= 0.0f) {
+        CriarPortal();
+        voo.tempoSpawn = 1.55f;
     }
 
-    Rectangle hitbox = { jogador->corpo.x + 6, jogador->corpo.y + 6, jogador->corpo.width - 12, jogador->corpo.height - 8 };
-
-    for (int i = 0; i < MAX_OBSTACULOS; i++) {
-        Obstaculo *obstaculo = &partida->obstaculos[i];
-        if (!obstaculo->ativo) continue;
-
-        obstaculo->corpo.x -= partida->velocidade * tempoQuadro;
-
-        if (obstaculo->corpo.x + obstaculo->corpo.width < 0.0f) {
-            obstaculo->ativo = false;
-            continue;
+    Rectangle hitbox = { voo.jogador.x + 5, voo.jogador.y + 4,
+                         voo.jogador.width - 10, voo.jogador.height - 8 };
+    for (int i = 0; i < MAX_PORTAIS; i++) {
+        Portal *portal = &voo.portais[i];
+        if (!portal->ativo) continue;
+        portal->x -= voo.velocidadeMundo * dt;
+        Rectangle topo = { portal->x, 0, LARGURA_PORTAL, portal->aberturaY };
+        float inicioBaixo = portal->aberturaY + portal->aberturaAltura;
+        Rectangle baixo = { portal->x, inicioBaixo, LARGURA_PORTAL, ALTURA - inicioBaixo };
+        if (CheckCollisionRecs(hitbox, topo) || CheckCollisionRecs(hitbox, baixo)) return VOO_COLISAO;
+        if (!portal->contado && portal->x + LARGURA_PORTAL < voo.jogador.x) {
+            portal->contado = true;
+            voo.portaisPassados++;
         }
-
-        if (!obstaculo->contado && obstaculo->corpo.x + obstaculo->corpo.width < jogador->corpo.x) {
-            obstaculo->contado = true;
-            partida->pontos += BONUS_OBSTACULO;
-        }
-
-        if (CheckCollisionRecs(hitbox, obstaculo->corpo)) return RESULTADO_COLISAO;
+        if (portal->x + LARGURA_PORTAL < 0) portal->ativo = false;
     }
 
-    if (partida->pontos >= PONTOS_TRANSICAO) return RESULTADO_TRANSICAO;
-
-    return RESULTADO_NADA;
+    if (voo.portaisPassados >= PORTAIS_PARA_VENCER) return VOO_TRANSICAO;
+    return VOO_NADA;
 }
 
-/* ---------- Desenho da corrida ---------- */
+static void DesenharVoo(void)
+{
+    ClearBackground((Color){ 18, 28, 55, 255 });
+    /* Fundo em movimento */
+    for (int i = 0; i < 12; i++) {
+        int x = (int)(i * 80 - voo.fundoOffset);
+        DrawCircle(x, 65 + (i % 3) * 42, 2, (Color){ 150, 190, 230, 180 });
+        DrawCircle(x + 35, 185 + (i % 4) * 35, 2, (Color){ 150, 190, 230, 150 });
+    }
+    DrawRectangle(0, ALTURA - 18, LARGURA, 18, (Color){ 37, 47, 73, 255 });
+    DrawRectangle(0, ALTURA - 18, LARGURA, 3, (Color){ 110, 180, 220, 255 });
 
-/* Escreve um texto centralizado na largura do minigame */
+    for (int i = 0; i < MAX_PORTAIS; i++) {
+        const Portal *p = &voo.portais[i];
+        if (!p->ativo) continue;
+        float baixoY = p->aberturaY + p->aberturaAltura;
+        Rectangle topo = { p->x, 0, LARGURA_PORTAL, p->aberturaY };
+        Rectangle baixo = { p->x, baixoY, LARGURA_PORTAL, ALTURA - baixoY };
+        DrawRectangleRec(topo, (Color){ 55, 190, 135, 255 });
+        DrawRectangleRec(baixo, (Color){ 55, 190, 135, 255 });
+        DrawRectangleLinesEx(topo, 3, (Color){ 20, 105, 93, 255 });
+        DrawRectangleLinesEx(baixo, 3, (Color){ 20, 105, 93, 255 });
+        DrawRectangle((int)p->x - 5, (int)p->aberturaY - 14, (int)LARGURA_PORTAL + 10, 14,
+                      (Color){ 100, 225, 165, 255 });
+        DrawRectangle((int)p->x - 5, (int)baixoY, (int)LARGURA_PORTAL + 10, 14,
+                      (Color){ 100, 225, 165, 255 });
+    }
+
+    /* Personagem com pequena asa animada pelo movimento vertical */
+    DrawRectangleRec(voo.jogador, SKYBLUE);
+    DrawRectangleLinesEx(voo.jogador, 2, BLUE);
+    DrawCircle((int)(voo.jogador.x + 25), (int)(voo.jogador.y + 9), 3, WHITE);
+    DrawCircle((int)(voo.jogador.x + 26), (int)(voo.jogador.y + 9), 1.5f, BLACK);
+    DrawTriangle((Vector2){voo.jogador.x + 3, voo.jogador.y + 15},
+                 (Vector2){voo.jogador.x - 8, voo.jogador.y + 8 + voo.velocidadeY * 0.015f},
+                 (Vector2){voo.jogador.x + 3, voo.jogador.y + 23}, ORANGE);
+
+    DrawText(TextFormat("PORTAIS: %d/%d", voo.portaisPassados, PORTAIS_PARA_VENCER), 20, 16, 22, RAYWHITE);
+    DrawText("ESPACO / W / ↑: impulsionar", 20, ALTURA - 42, 17, LIGHTGRAY);
+    DrawText("Mantenha-se no ar e atravesse as aberturas", 335, ALTURA - 42, 16, LIGHTGRAY);
+}
+
+/* ---------- Puzzles em grade ---------- */
+
+static void AdicionarParede(int x, int y)
+{
+    if (puzzle.quantidadeParedes >= MAX_PAREDES) return;
+    puzzle.paredes[puzzle.quantidadeParedes++] = (TilePos){ x, y };
+}
+
+static void AdicionarCaixa(int x, int y)
+{
+    if (puzzle.quantidadeCaixas >= MAX_CAIXAS) return;
+    puzzle.caixas[puzzle.quantidadeCaixas++] = (TilePos){ x, y };
+}
+
+static void CarregarFase(int fase)
+{
+    puzzle.quantidadeParedes = 0;
+    puzzle.quantidadeCaixas = 0;
+    puzzle.quantidadePlacas = 0;
+    puzzle.chaveColetada = false;
+    puzzle.exigeChave = false;
+    puzzle.temChave = false;
+    puzzle.tempoPasso = 0.0f;
+    puzzle.jogador = (TilePos){ 2, 3 };
+    puzzle.saida = (TilePos){ 16, 3 };
+
+    if (fase == 1) {
+        AdicionarCaixa(6, 3);
+        puzzle.placas[puzzle.quantidadePlacas++] = (TilePos){ 11, 3 };
+        /* Trilhos nas bordas deixam claro que a caixa precisa chegar à placa. */
+        for (int x = 4; x <= 12; x++) { AdicionarParede(x, 1); AdicionarParede(x, 5); }
+    } else if (fase == 2) {
+        AdicionarCaixa(5, 3);
+        puzzle.placas[puzzle.quantidadePlacas++] = (TilePos){ 12, 3 };
+        puzzle.temChave = true;
+        puzzle.exigeChave = true;
+        puzzle.chave = (TilePos){ 9, 2 };
+        /* Pilares formam um caminho em zigue-zague entre chave, caixa e saída. */
+        /* Os dois vãos no primeiro pilar permitem contornar a caixa por cima. */
+        for (int y = 1; y <= 4; y++) if (y == 3) AdicionarParede(8, y);
+        for (int y = 2; y <= 5; y++) if (y != 4) AdicionarParede(10, y);
+        for (int x = 11; x <= 14; x++) AdicionarParede(x, 1);
+    } else {
+        AdicionarCaixa(4, 2);
+        AdicionarCaixa(4, 4);
+        puzzle.placas[puzzle.quantidadePlacas++] = (TilePos){ 12, 2 };
+        puzzle.placas[puzzle.quantidadePlacas++] = (TilePos){ 12, 4 };
+        /* Duas passagens estreitas forçam a organizar as caixas separadamente. */
+        for (int y = 1; y <= 5; y++) if (y != 2 && y != 4) AdicionarParede(8, y);
+        for (int y = 1; y <= 5; y++) if (y != 2 && y != 4) AdicionarParede(10, y);
+        for (int x = 11; x <= 14; x++) { AdicionarParede(x, 1); AdicionarParede(x, 5); }
+    }
+}
+
+static bool MesmaPos(TilePos a, TilePos b) { return a.x == b.x && a.y == b.y; }
+
+static bool TemParede(TilePos pos)
+{
+    if (pos.x < 1 || pos.x >= GRID_COLS - 1 || pos.y < 1 || pos.y >= GRID_ROWS - 1) return true;
+    for (int i = 0; i < puzzle.quantidadeParedes; i++) if (MesmaPos(pos, puzzle.paredes[i])) return true;
+    return false;
+}
+
+static int CaixaNaPos(TilePos pos)
+{
+    for (int i = 0; i < puzzle.quantidadeCaixas; i++) if (MesmaPos(pos, puzzle.caixas[i])) return i;
+    return -1;
+}
+
+static bool PlacaAtivada(int indice)
+{
+    for (int i = 0; i < puzzle.quantidadeCaixas; i++)
+        if (MesmaPos(puzzle.caixas[i], puzzle.placas[indice])) return true;
+    return false;
+}
+
+static bool TodasPlacasAtivadas(void)
+{
+    for (int i = 0; i < puzzle.quantidadePlacas; i++) if (!PlacaAtivada(i)) return false;
+    return true;
+}
+
+static bool PortaAberta(void)
+{
+    return TodasPlacasAtivadas() && (!puzzle.exigeChave || puzzle.chaveColetada);
+}
+
+static void TentarMover(int dx, int dy)
+{
+    TilePos destino = { puzzle.jogador.x + dx, puzzle.jogador.y + dy };
+    if (TemParede(destino)) return;
+    if (MesmaPos(destino, puzzle.saida) && !PortaAberta()) return;
+    int caixa = CaixaNaPos(destino);
+    if (caixa >= 0) {
+        TilePos destinoCaixa = { destino.x + dx, destino.y + dy };
+        if (TemParede(destinoCaixa) || CaixaNaPos(destinoCaixa) >= 0) return;
+        puzzle.caixas[caixa] = destinoCaixa;
+    }
+    puzzle.jogador = destino;
+    if (puzzle.temChave && MesmaPos(puzzle.jogador, puzzle.chave)) puzzle.chaveColetada = true;
+}
+
+static bool AtualizarPuzzle(float dt)
+{
+    puzzle.tempoPasso -= dt;
+    if (IsKeyPressed(KEY_R)) { CarregarFase(faseAtual); return false; }
+    if (puzzle.tempoPasso <= 0.0f) {
+        int dx = 0, dy = 0;
+        if (IsKeyDown(KEY_RIGHT) || IsKeyDown(KEY_D)) dx = 1;
+        else if (IsKeyDown(KEY_LEFT) || IsKeyDown(KEY_A)) dx = -1;
+        else if (IsKeyDown(KEY_DOWN) || IsKeyDown(KEY_S)) dy = 1;
+        else if (IsKeyDown(KEY_UP) || IsKeyDown(KEY_W)) dy = -1;
+        if (dx != 0 || dy != 0) {
+            TentarMover(dx, dy);
+            puzzle.tempoPasso = PASSO_JOGADOR;
+        }
+    }
+    return PortaAberta() && MesmaPos(puzzle.jogador, puzzle.saida);
+}
+
+static Rectangle RetanguloTile(TilePos pos)
+{
+    return (Rectangle){ AREA_X + pos.x * TILE, AREA_Y + pos.y * TILE, TILE, TILE };
+}
+
+static void DesenharPuzzle(void)
+{
+    ClearBackground((Color){ 18, 20, 38, 255 });
+    DrawText(TextFormat("FASE %d/3", faseAtual), 20, 16, 23, RAYWHITE);
+    const char *objetivo = faseAtual == 1 ? "Empurre a caixa para a placa e atravesse a porta" :
+                           faseAtual == 2 ? "Pegue a chave, ative a placa e abra a porta" :
+                           "Coloque uma caixa em cada placa para abrir a saída";
+    DrawText(objetivo, 20, 48, 17, LIGHTGRAY);
+
+    DrawRectangle(AREA_X, AREA_Y, GRID_COLS * TILE, GRID_ROWS * TILE, (Color){ 30, 37, 58, 255 });
+    for (int x = 0; x <= GRID_COLS; x++) DrawLine(AREA_X + x*TILE, AREA_Y, AREA_X + x*TILE, AREA_Y + GRID_ROWS*TILE, (Color){ 48, 57, 79, 255 });
+    for (int y = 0; y <= GRID_ROWS; y++) DrawLine(AREA_X, AREA_Y + y*TILE, AREA_X + GRID_COLS*TILE, AREA_Y + y*TILE, (Color){ 48, 57, 79, 255 });
+
+    for (int i = 0; i < puzzle.quantidadeParedes; i++) {
+        Rectangle r = RetanguloTile(puzzle.paredes[i]);
+        DrawRectangleRec(r, (Color){ 82, 92, 120, 255 });
+        DrawRectangleLinesEx(r, 2, (Color){ 42, 49, 72, 255 });
+    }
+    for (int i = 0; i < puzzle.quantidadePlacas; i++) {
+        Rectangle r = RetanguloTile(puzzle.placas[i]);
+        bool ativa = PlacaAtivada(i);
+        DrawRectangle((int)r.x + 5, (int)r.y + 5, TILE - 10, TILE - 10,
+                      ativa ? (Color){ 70, 220, 145, 255 } : (Color){ 220, 170, 65, 255 });
+        DrawText(ativa ? "ON" : "!", (int)r.x + 12, (int)r.y + 10, 18, BLACK);
+    }
+    if (puzzle.temChave && !puzzle.chaveColetada) {
+        Rectangle r = RetanguloTile(puzzle.chave);
+        DrawCircle((int)(r.x + TILE/2), (int)(r.y + TILE/2), 10, GOLD);
+        DrawCircleLines((int)(r.x + TILE/2), (int)(r.y + TILE/2), 10, ORANGE);
+    }
+    for (int i = 0; i < puzzle.quantidadeCaixas; i++) {
+        Rectangle r = RetanguloTile(puzzle.caixas[i]);
+        DrawRectangle((int)r.x + 4, (int)r.y + 4, TILE - 8, TILE - 8, (Color){ 205, 135, 70, 255 });
+        DrawRectangleLinesEx((Rectangle){r.x + 4, r.y + 4, TILE - 8, TILE - 8}, 2, BROWN);
+        DrawLine((int)r.x + 11, (int)r.y + 11, (int)r.x + TILE - 11, (int)r.y + TILE - 11, BROWN);
+        DrawLine((int)r.x + TILE - 11, (int)r.y + 11, (int)r.x + 11, (int)r.y + TILE - 11, BROWN);
+    }
+
+    bool portaAberta = PortaAberta();
+    Rectangle saida = RetanguloTile(puzzle.saida);
+    DrawRectangle((int)saida.x + 5, (int)saida.y + 3, TILE - 10, TILE - 6,
+                  portaAberta ? (Color){ 70, 210, 130, 255 } : (Color){ 150, 65, 80, 255 });
+    DrawText(portaAberta ? "GO" : "X", (int)saida.x + 10, (int)saida.y + 11, 18, RAYWHITE);
+
+    Rectangle jogador = RetanguloTile(puzzle.jogador);
+    DrawRectangle((int)jogador.x + 7, (int)jogador.y + 6, TILE - 14, TILE - 12, SKYBLUE);
+    DrawRectangleLinesEx((Rectangle){jogador.x + 7, jogador.y + 6, TILE - 14, TILE - 12}, 2, BLUE);
+    DrawCircle((int)jogador.x + 26, (int)jogador.y + 16, 2, WHITE);
+
+    DrawText(TextFormat("Placas: %d/%d", (int)(PlacaAtivada(0) ? 1 : 0) +
+             (puzzle.quantidadePlacas > 1 && PlacaAtivada(1) ? 1 : 0), puzzle.quantidadePlacas), 20, 390, 18, RAYWHITE);
+    if (puzzle.exigeChave) DrawText(puzzle.chaveColetada ? "Chave: coletada" : "Chave: falta coletar", 190, 390, 18, GOLD);
+    DrawText("WASD/setas: mover e empurrar   R: reiniciar fase   ESC: menu", 20, 420, 16, LIGHTGRAY);
+}
+
 static void TextoCentral(const char *texto, int y, int tamanho, Color cor)
 {
     DrawText(texto, (LARGURA - MeasureText(texto, tamanho)) / 2, y, tamanho, cor);
 }
 
-/* Desenha o fundo e o chao, que "anda" conforme o deslocamento */
-static void DesenharCenario(float deslocamento)
-{
-    ClearBackground((Color){ 24, 24, 38, 255 });
-    DrawRectangle(0, CHAO_Y, LARGURA, ALTURA - CHAO_Y, (Color){ 46, 46, 70, 255 });
-    DrawRectangle(0, CHAO_Y, LARGURA, 3, RAYWHITE);
-
-    int inicio = -(int)deslocamento;
-    for (int x = inicio; x < LARGURA; x += 60) {
-        DrawRectangle(x, CHAO_Y + 25, 24, 4, (Color){ 90, 90, 120, 255 });
-    }
-}
-
-/* Desenha os obstaculos e o jogador */
-static void DesenharObjetos(const Jogo *partida)
-{
-    for (int i = 0; i < MAX_OBSTACULOS; i++) {
-        const Obstaculo *obstaculo = &partida->obstaculos[i];
-        if (!obstaculo->ativo) continue;
-        DrawRectangleRec(obstaculo->corpo, (Color){ 230, 80, 80, 255 });
-        DrawRectangleLinesEx(obstaculo->corpo, 2, MAROON);
-    }
-
-    const Rectangle *corpoJogador = &partida->jogador.corpo;
-    DrawRectangleRec(*corpoJogador, SKYBLUE);
-    DrawRectangleLinesEx(*corpoJogador, 2, BLUE);
-    DrawRectangle((int)corpoJogador->x + 24, (int)corpoJogador->y + 10, 10, 10, WHITE);
-    DrawRectangle((int)corpoJogador->x + 29, (int)corpoJogador->y + 13, 5, 5, BLACK);
-}
-
-/* Desenha os pontos (esquerda) e o recorde (direita) */
-static void DesenharHud(const Jogo *partida, int melhor)
-{
-    DrawText(TextFormat("Pontos: %d", (int)partida->pontos), 20, 16, 24, RAYWHITE);
-
-    const char *textoRecorde = TextFormat("Recorde: %d", melhor);
-    DrawText(textoRecorde, LARGURA - MeasureText(textoRecorde, 24) - 20, 16, 24, GOLD);
-}
-
-/* Tela de fim de jogo: pontos, recorde e opcoes */
-static void DesenharFim(int pontuacao, int melhor, bool ehNovoRecorde)
-{
-    DrawRectangle(0, 0, LARGURA, ALTURA, Fade(BLACK, 0.6f));
-    TextoCentral("FIM DE JOGO", 100, 50, RAYWHITE);
-    TextoCentral(TextFormat("Pontos: %d", pontuacao), 180, 30, RAYWHITE);
-
-    if (ehNovoRecorde) {
-        TextoCentral("Novo recorde!", 225, 26, GOLD);
-    } else {
-        TextoCentral(TextFormat("Recorde: %d", melhor), 225, 26, LIGHTGRAY);
-    }
-
-    TextoCentral("ENTER: jogar de novo    ESC: menu", 300, 20, LIGHTGRAY);
-}
-
-/* ---------- Logica do puzzle ---------- */
-
-/* Adiciona um bloco a sala do puzzle */
-static void AdicionarBloco(Puzzle *sala, float x, float y, float largura, float altura, bool quebravel)
-{
-    sala->blocos[sala->numBlocos].corpo = (Rectangle){ x, y, largura, altura };
-    sala->blocos[sala->numBlocos].quebravel = quebravel;
-    sala->blocos[sala->numBlocos].ativo = true;
-    sala->numBlocos++;
-}
-
-/* Monta a sala de cada fase: paredes fixas (quebravel=false) e blocos
-   destrutiveis (quebravel=true) que so cedem a tiro. */
-static void CarregarFase(int fase, Puzzle *sala)
-{
-    sala->numBlocos = 0;
-    for (int i = 0; i < MAX_BALAS; i++) sala->balas[i].ativo = false;
-    sala->balasRestantes = BALAS_POR_FASE;
-    sala->jogador.direcaoOlhar = (Vector2){ 1.0f, 0.0f };
-    sala->jogador.corpo = (Rectangle){ 60.0f, 150.0f, 30.0f, 30.0f };
-    sala->saida = (Rectangle){ 740.0f, 170.0f, 20.0f, 90.0f };
-
-    switch (fase) {
-    case 1:
-        AdicionarBloco(sala, 250, 90, 20, 180, false);
-        AdicionarBloco(sala, 500, 90, 40, 300, true);
-        break;
-
-    case 2:
-        AdicionarBloco(sala, 220, 90, 20, 210, false);
-        AdicionarBloco(sala, 420, 180, 20, 210, false);
-        AdicionarBloco(sala, 470, 90, 40, 300, true);
-        AdicionarBloco(sala, 650, 90, 40, 300, true);
-        break;
-
-    case 3:
-    default:
-        AdicionarBloco(sala, 150, 90, 20, 210, false);
-        AdicionarBloco(sala, 190, 90, 40, 300, true);
-        AdicionarBloco(sala, 350, 180, 20, 210, false);
-        AdicionarBloco(sala, 390, 90, 40, 300, true);
-        AdicionarBloco(sala, 550, 90, 20, 210, false);
-        AdicionarBloco(sala, 590, 90, 40, 300, true);
-        break;
-    }
-}
-
-/* true se o retangulo "alvo" bate em algum bloco ainda ativo */
-static bool ColideComSolidos(const Puzzle *sala, Rectangle alvo)
-{
-    for (int i = 0; i < sala->numBlocos; i++) {
-        if (sala->blocos[i].ativo && CheckCollisionRecs(alvo, sala->blocos[i].corpo)) return true;
-    }
-    return false;
-}
-
-/* Move o jogador, trata os tiros e confere se chegou na saida */
-static ResultadoPuzzle AtualizarPuzzle(Puzzle *sala, float tempoQuadro)
-{
-    JogadorPuzzle *jogador = &sala->jogador;
-    Vector2 movimento = { 0.0f, 0.0f };
-
-    if (IsKeyDown(KEY_RIGHT) || IsKeyDown(KEY_D)) movimento.x += 1.0f;
-    if (IsKeyDown(KEY_LEFT)  || IsKeyDown(KEY_A)) movimento.x -= 1.0f;
-    if (IsKeyDown(KEY_DOWN)  || IsKeyDown(KEY_S)) movimento.y += 1.0f;
-    if (IsKeyDown(KEY_UP)    || IsKeyDown(KEY_W)) movimento.y -= 1.0f;
-
-    if (movimento.x != 0.0f || movimento.y != 0.0f) {
-        float comprimento = sqrtf(movimento.x * movimento.x + movimento.y * movimento.y);
-        movimento.x /= comprimento;
-        movimento.y /= comprimento;
-        jogador->direcaoOlhar = movimento; /* mira sempre na ultima direcao andada */
-    }
-
-    Rectangle tentativaX = jogador->corpo;
-    tentativaX.x += movimento.x * PUZZLE_VEL * tempoQuadro;
-    if (tentativaX.x >= PUZZLE_AREA_X &&
-        tentativaX.x + tentativaX.width <= PUZZLE_AREA_X + PUZZLE_AREA_LARGURA &&
-        !ColideComSolidos(sala, tentativaX)) {
-        jogador->corpo.x = tentativaX.x;
-    }
-
-    Rectangle tentativaY = jogador->corpo;
-    tentativaY.y += movimento.y * PUZZLE_VEL * tempoQuadro;
-    if (tentativaY.y >= PUZZLE_AREA_Y &&
-        tentativaY.y + tentativaY.height <= PUZZLE_AREA_Y + PUZZLE_AREA_ALTURA &&
-        !ColideComSolidos(sala, tentativaY)) {
-        jogador->corpo.y = tentativaY.y;
-    }
-
-    if (IsKeyPressed(KEY_SPACE) && sala->balasRestantes > 0) {
-        for (int i = 0; i < MAX_BALAS; i++) {
-            if (!sala->balas[i].ativo) {
-                float cx = jogador->corpo.x + jogador->corpo.width / 2.0f - 5.0f;
-                float cy = jogador->corpo.y + jogador->corpo.height / 2.0f - 5.0f;
-                sala->balas[i].corpo = (Rectangle){ cx, cy, 10.0f, 10.0f };
-                sala->balas[i].direcao = jogador->direcaoOlhar;
-                sala->balas[i].ativo = true;
-                sala->balasRestantes--;
-                break;
-            }
-        }
-    }
-
-    for (int i = 0; i < MAX_BALAS; i++) {
-        Bala *bala = &sala->balas[i];
-        if (!bala->ativo) continue;
-
-        bala->corpo.x += bala->direcao.x * BALA_VEL * tempoQuadro;
-        bala->corpo.y += bala->direcao.y * BALA_VEL * tempoQuadro;
-
-        if (bala->corpo.x < PUZZLE_AREA_X || bala->corpo.x > PUZZLE_AREA_X + PUZZLE_AREA_LARGURA ||
-            bala->corpo.y < PUZZLE_AREA_Y || bala->corpo.y > PUZZLE_AREA_Y + PUZZLE_AREA_ALTURA) {
-            bala->ativo = false;
-            continue;
-        }
-
-        for (int k = 0; k < sala->numBlocos; k++) {
-            Bloco *bloco = &sala->blocos[k];
-            if (!bloco->ativo) continue;
-            if (CheckCollisionRecs(bala->corpo, bloco->corpo)) {
-                bala->ativo = false;
-                if (bloco->quebravel) bloco->ativo = false;
-                break;
-            }
-        }
-    }
-
-    if (CheckCollisionRecs(jogador->corpo, sala->saida)) return PUZZLE_SAIU;
-    return PUZZLE_NADA;
-}
-
-/* ---------- Desenho do puzzle ---------- */
-
-/* Desenha a sala do puzzle, a saida, as balas e o jogador */
-static void DesenharPuzzle(const Puzzle *sala, int fase)
-{
-    ClearBackground((Color){ 18, 18, 30, 255 });
-    DrawRectangleLines(PUZZLE_AREA_X, PUZZLE_AREA_Y, PUZZLE_AREA_LARGURA, PUZZLE_AREA_ALTURA, RAYWHITE);
-
-    for (int i = 0; i < sala->numBlocos; i++) {
-        const Bloco *bloco = &sala->blocos[i];
-        if (!bloco->ativo) continue;
-        Color cor = bloco->quebravel ? (Color){ 200, 140, 60, 255 } : (Color){ 90, 90, 110, 255 };
-        DrawRectangleRec(bloco->corpo, cor);
-        DrawRectangleLinesEx(bloco->corpo, 2, bloco->quebravel ? MAROON : BLACK);
-    }
-
-    DrawRectangleRec(sala->saida, (Color){ 60, 200, 100, 255 });
-    DrawText("SAIDA", (int)sala->saida.x - 12, (int)sala->saida.y - 22, 16, GREEN);
-
-    for (int i = 0; i < MAX_BALAS; i++) {
-        if (sala->balas[i].ativo) DrawRectangleRec(sala->balas[i].corpo, YELLOW);
-    }
-
-    const Rectangle *corpoJogador = &sala->jogador.corpo;
-    DrawRectangleRec(*corpoJogador, SKYBLUE);
-    DrawRectangleLinesEx(*corpoJogador, 2, BLUE);
-    float cx = corpoJogador->x + corpoJogador->width / 2.0f;
-    float cy = corpoJogador->y + corpoJogador->height / 2.0f;
-    DrawLine((int)cx, (int)cy,
-             (int)(cx + sala->jogador.direcaoOlhar.x * 20.0f),
-             (int)(cy + sala->jogador.direcaoOlhar.y * 20.0f), WHITE);
-
-    DrawText(TextFormat("Fase %d/%d", fase, TOTAL_FASES), 20, 16, 24, RAYWHITE);
-    DrawText(TextFormat("Balas: %d", sala->balasRestantes), LARGURA - 140, 16, 24, YELLOW);
-    DrawText("WASD/setas: mover   ESPACO: atirar   R: reiniciar fase   ESC: menu",
-             20, ALTURA - 26, 16, LIGHTGRAY);
-}
-
-/* =====================================================
-   FUNCOES PUBLICAS (usadas pelo game.c)
-   ===================================================== */
-
-/* Prepara o minigame para comecar do zero */
 void InitMinigame(void)
 {
     SetRandomSeed((unsigned int)time(NULL));
-
     recorde = CarregarRecorde();
     pontuacaoFinal = 0;
     novoRecorde = false;
-    faseAtual = 0;
-
-    ReiniciarJogo(&jogo);
-
-    tela = TELA_JOGO;
+    faseAtual = 1;
+    ReiniciarVoo();
+    tela = TELA_VOO;
 }
 
-
-/* Atualiza o minigame e informa se continua, volta ao menu ou foi vencido */
 MinigameResult UpdateMinigame(void)
 {
-    float tempoQuadro = GetFrameTime();
-    if (tempoQuadro > 0.05f) tempoQuadro = 0.05f;
-
+    float dt = GetFrameTime();
+    if (dt > 0.05f) dt = 0.05f;
     switch (tela) {
-
-    case TELA_JOGO: {
+    case TELA_VOO: {
         if (IsKeyPressed(KEY_ESCAPE)) return MINIGAME_MENU;
-
-        ResultadoCorrida resultado = AtualizarJogo(&jogo, tempoQuadro);
-
-        if (resultado == RESULTADO_COLISAO) {
-            pontuacaoFinal = (int)jogo.pontos;
+        ResultadoVoo resultado = AtualizarVoo(dt);
+        if (resultado == VOO_COLISAO) {
+            pontuacaoFinal = voo.portaisPassados;
             novoRecorde = pontuacaoFinal > recorde;
-            if (novoRecorde) {
-                recorde = pontuacaoFinal;
-                SalvarRecorde(recorde);
-            }
+            if (novoRecorde) { recorde = pontuacaoFinal; SalvarRecorde(recorde); }
             tela = TELA_FIM;
-        } else if (resultado == RESULTADO_TRANSICAO) {
+        } else if (resultado == VOO_TRANSICAO) {
             faseAtual = 1;
-            CarregarFase(faseAtual, &puzzle);
+            CarregarFase(faseAtual);
             tela = TELA_PUZZLE;
         }
         break;
     }
-
     case TELA_FIM:
-        if (IsKeyPressed(KEY_ENTER)) {
-            ReiniciarJogo(&jogo);
-            tela = TELA_JOGO;
-        }
+        if (IsKeyPressed(KEY_ENTER)) { ReiniciarVoo(); tela = TELA_VOO; }
         if (IsKeyPressed(KEY_ESCAPE)) return MINIGAME_MENU;
         break;
-
     case TELA_PUZZLE:
         if (IsKeyPressed(KEY_ESCAPE)) return MINIGAME_MENU;
-
-        if (IsKeyPressed(KEY_R)) {
-            CarregarFase(faseAtual, &puzzle);
-            break;
-        }
-
-        if (AtualizarPuzzle(&puzzle, tempoQuadro) == PUZZLE_SAIU) {
+        if (AtualizarPuzzle(dt)) {
             faseAtual++;
-            if (faseAtual > TOTAL_FASES) {
-                tela = TELA_VITORIA;
-            } else {
-                CarregarFase(faseAtual, &puzzle);
-            }
+            if (faseAtual > 3) tela = TELA_VITORIA;
+            else CarregarFase(faseAtual);
         }
         break;
-
     case TELA_VITORIA:
         if (IsKeyPressed(KEY_ENTER)) return MINIGAME_VENCEU;
         if (IsKeyPressed(KEY_ESCAPE)) return MINIGAME_MENU;
         break;
     }
-
     return MINIGAME_CONTINUA;
 }
 
-
-/* Desenha o minigame ampliado (camera) para caber na janela do jogo */
 void DrawMinigame(void)
 {
-    // O minigame foi desenhado em 800x450: a camera amplia para a janela.
-    float zoomX = (float)GetScreenWidth() / (float)LARGURA;
-    float zoomY = (float)GetScreenHeight() / (float)ALTURA;
-
+    float zoomX = (float)GetScreenWidth() / LARGURA;
+    float zoomY = (float)GetScreenHeight() / ALTURA;
     Camera2D camera = { 0 };
-    camera.zoom = (zoomX < zoomY) ? zoomX : zoomY;
-
+    camera.zoom = zoomX < zoomY ? zoomX : zoomY;
     BeginMode2D(camera);
-
     switch (tela) {
-
-    case TELA_JOGO:
-        DesenharCenario(jogo.deslocamentoChao);
-        DesenharObjetos(&jogo);
-        DesenharHud(&jogo, recorde);
+    case TELA_VOO:
+        DesenharVoo();
         break;
-
     case TELA_FIM:
-        DesenharCenario(jogo.deslocamentoChao);
-        DesenharObjetos(&jogo);
-        DesenharHud(&jogo, recorde);
-        DesenharFim(pontuacaoFinal, recorde, novoRecorde);
+        DesenharVoo();
+        DrawRectangle(0, 0, LARGURA, ALTURA, Fade(BLACK, 0.68f));
+        TextoCentral("FIM DE JOGO", 115, 48, RAYWHITE);
+        TextoCentral(TextFormat("Portais atravessados: %d", pontuacaoFinal), 190, 25, RAYWHITE);
+        TextoCentral(novoRecorde ? "Novo recorde!" : TextFormat("Recorde: %d", recorde), 235, 23, GOLD);
+        TextoCentral("ENTER: tentar de novo    ESC: menu", 300, 19, LIGHTGRAY);
         break;
-
     case TELA_PUZZLE:
-        DesenharPuzzle(&puzzle, faseAtual);
+        DesenharPuzzle();
         break;
-
     case TELA_VITORIA:
-        ClearBackground((Color){ 18, 18, 30, 255 });
-        TextoCentral("REDE RESTAURADA!", 160, 40, GOLD);
-        TextoCentral("Voce completou as 3 fases.", 220, 24, RAYWHITE);
-        TextoCentral("ENTER: continuar    ESC: menu", 290, 20, LIGHTGRAY);
+        ClearBackground((Color){ 18, 20, 38, 255 });
+        TextoCentral("REDE RESTAURADA!", 145, 40, GOLD);
+        TextoCentral("Voce completou as 3 salas de puzzle.", 215, 23, RAYWHITE);
+        TextoCentral("ENTER: continuar    ESC: menu", 290, 19, LIGHTGRAY);
         break;
     }
-
     EndMode2D();
 }
