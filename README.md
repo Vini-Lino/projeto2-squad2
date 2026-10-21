@@ -305,15 +305,14 @@ Para a próxima sprint, a proposta é registrar cada sessão com três informaç
 
 | Integrante | Papel no Projeto | Principais Responsabilidades |
 |---|---|---|
-| Aline Santos | Game Designer | UX/UI e Narrativa |
-| Ana Rita Correia | Product Owner | Visão do produto e priorização do backlog |
-| Gabriel Farias | Desenvolvedor | Desenvolvimento e implementação do produto |
-| Juan Nunes | Desenvolvedor | Desenvolvimento e implementação do produto |
+| Aline Santos | Game Designer, Desenvolvedora | UX/UI e Narrativa, Desenvolvimento e implementação do produto |
+| Ana Rita Correia | Product Owner, Desenvolvedora | Visão do produto e priorização do backlog, Desenvolvimento e implementação do produto |
+| Juan Nunes |  |  |
 | Juliana Freire | Scrum Master | Organização do fluxo e acompanhamento das tarefas |
-| Leandro Luís | Desenvolvedor | Q/A e Testes |
+| Leandro Luís |  |  |
 | Luiz Mario | Desenvolvedor | Desenvolvimento e implementação do produto |
 | Vinícius Lino | Desenvolvedor | Desenvolvimento e implementação do produto |
-| Vitória Santos | Game Designer | UX/UI e Narrativa |
+| Vitória Santos | Game Designer, Desenvolvedor | UX/UI, Desenvolvimento e implementação do produto |
 
 ### Perfis
 
