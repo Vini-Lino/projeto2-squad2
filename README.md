@@ -18,6 +18,7 @@
 - [Demonstração da Solução](#demonstracao)
   - [Protótipo Lo-Fi](#prototipo)
   - [Núcleo do Jogo em C (PIF)](#entrega-pif)
+- [Colaboração e evidências](#colaboracao)
 - [Equipe](#equipe)
 - [Organização do Repositório](#organizacao)
 - [Links Importantes](#links)
@@ -117,18 +118,9 @@ O desenvolvimento do projeto é acompanhado por meio das ferramentas de gerencia
 
 🔗 **Trello:** [Acessar Trello](https://trello.com/b/t0u8Iplf)
 
-**Última atualização:** 24/09/2026
+**Última atualização:** 21/10/2026
 
 ---
-
-<a id="epicos"></a>
-# 📚 Épicos e Histórias de Usuário
-
-As histórias de usuário representam as principais funcionalidades e experiências previstas para o **Re:7**.
-
-Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as histórias selecionadas para a Entrega 02 possuem acesso aos seus respectivos diagramas de atividades e protótipos Lo-Fi.
-
-**Status:** ⏳ A fazer • 🔄 Em andamento • ✅ Concluído
 
 <a id="epicos"></a>
 # 📚 Épicos e Histórias de Usuário
@@ -260,7 +252,7 @@ Ainda dentro de `entrega_pif/re7`:
 
 | Tecla | Ação |
 |---|---|
-| Mouse | Clicar nos botões do menu |
+| Mouse | Clicar nos botões do menu e nos objetos do quarto |
 | ESPAÇO | Avançar as falas |
 | ESC | Voltar ao menu (o progresso é salvo) |
 | Minigame (corrida) | ESPAÇO, W ou seta para cima para pular |
@@ -270,13 +262,41 @@ Ainda dentro de `entrega_pif/re7`:
 ### O que o jogo contém
 
 - **Menu principal:** Novo Jogo, Continuar (usa o save), Créditos e Sair.
-- **Missão jogável do início ao fim:** introdução em 2007, minigame de obstáculos com puzzle de 3 fases e epílogo.
+- **Missão jogável do início ao fim:** introdução em 2007, exploração do quarto, minigame de obstáculos com puzzle de 3 fases e epílogo.
 - **Tratamento de entradas inválidas:** feito com laço `while` na tela final.
 - **Game loop com encerramento controlado:** a tela final pergunta se o jogador quer jogar de novo ou sair.
 
 🎬 **Screencast:** [Assistir à demonstração](https://drive.google.com/file/d/1cgYbGEYNcb32-t48MkWrdA1o_scuL_fV/view?usp=sharing)
 
 O vídeo mostra o jogo rodando, o tratamento de erros em ação e a missão completa sendo jogada.
+
+---
+
+<a id="colaboracao"></a>
+# 🤝 Colaboração e evidências
+
+## Programação em pares
+
+Durante a sprint, a equipe realizou sessões de programação em pares, remotamente por chamada com compartilhamento de tela e presencialmente na faculdade. Os integrantes alternaram entre os papéis de **piloto**, responsável por escrever o código, e **navegador**, responsável por acompanhar a implementação, revisar e discutir soluções. Além dessas sessões, a equipe analisou o código em conjunto semanalmente.
+
+Este relato foi elaborado retrospectivamente, com base nas experiências dos participantes.
+
+## Contribuições das duplas
+
+| Dupla | Formato | Trabalho realizado |
+|---|---|---|
+| Vitória e Aline | Chamada com tela compartilhada | Implementação da US08: exploração do quarto em 2007. |
+| Juliana e Luiz Mario | Presencial, na faculdade | Implementação do reprodutor de áudio. |
+| Ana Rita e Luiz Mario | Presencial, na faculdade | Inserção dos áudios no código do jogo. |
+| Vitória e Luiz Mario | Chamada com tela compartilhada | Integração do reprodutor de áudio com o código da US08. |
+
+## Experiência e aprendizados
+
+A organização da US08 foi um ponto positivo do trabalho em dupla. O acompanhamento e o revezamento permitiram discutir a implementação durante o desenvolvimento.
+
+A principal dificuldade foi dividir a implementação dos sons entre diferentes duplas e integrar as partes ao jogo. Essa experiência indicou a necessidade de combinar previamente as responsabilidades e os pontos de integração do código.
+
+Para a próxima sprint, a proposta é registrar cada sessão com três informações: **dupla, tarefa realizada e resultado**, além de associar o trabalho à história e ao commit ou pull request correspondente.
 
 ---
 
@@ -332,7 +352,12 @@ O vídeo mostra o jogo rodando, o tratamento de erros em ação e a missão comp
 │   │   ├── US07-diagrama-atividades.png
 │   │   ├── US08-diagrama-atividades.png
 │   │   ├── US09-diagrama-atividades.png
-│   │   └── US10-diagrama-atividades.png
+│   │   ├── US10-diagrama-atividades.png
+│   │   ├── US11-diagrama-atividades.png
+│   │   ├── US13-eventos-sonoros-prioritarios.png
+│   │   ├── US14-diagrama-atividades.png
+│   │   ├── US15-diagrama-atividades.png
+│   │   └── US16-diagrama-atividades.png
 │   │
 │   └── 📁 prototipos
 │       ├── 📁 US01
@@ -358,6 +383,7 @@ O vídeo mostra o jogo rodando, o tratamento de erros em ação e a missão comp
 │       │   ├── scenes.c / scenes.h
 │       │   ├── story.c / story.h
 │       │   ├── minigame.c / minigame.h
+│       │   ├── room.c / room.h
 │       │   ├── ui.c / ui.h
 │       │   └── assets.c / assets.h
 │       ├── re7_novo.exe
