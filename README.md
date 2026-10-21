@@ -18,6 +18,7 @@
 - [Demonstração da Solução](#demonstracao)
   - [Protótipo Lo-Fi](#prototipo)
   - [Núcleo do Jogo em C (PIF)](#entrega-pif)
+- [Colaboração e evidências](#colaboracao)
 - [Equipe](#equipe)
 - [Organização do Repositório](#organizacao)
 - [Links Importantes](#links)
@@ -117,7 +118,7 @@ O desenvolvimento do projeto é acompanhado por meio das ferramentas de gerencia
 
 🔗 **Trello:** [Acessar Trello](https://trello.com/b/t0u8Iplf)
 
-**Última atualização:** 24/09/2026
+**Última atualização:** 21/10/2026
 
 ---
 
@@ -126,7 +127,7 @@ O desenvolvimento do projeto é acompanhado por meio das ferramentas de gerencia
 
 As histórias de usuário representam as principais funcionalidades e experiências previstas para o **Re:7**.
 
-Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as histórias selecionadas para a Entrega 02 possuem acesso aos seus respectivos diagramas de atividades e protótipos Lo-Fi.
+Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as histórias possuem acesso aos seus respectivos diagramas de atividades e, quando existentes, protótipos Lo-Fi.
 
 **Status:** ⏳ A fazer • 🔄 Em andamento • ✅ Concluído
 
@@ -134,8 +135,8 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US01` | Iniciar novo jogo | [Diagrama](docs/diagramas/US01-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=11%3A10&show-proto-sidebar=1) | ⏳ |
-| `US14` | Sair ou retornar ao menu | — | — | ⏳ |
+| `US01` | Iniciar novo jogo | [Diagrama](docs/diagramas/US01-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=11%3A10&show-proto-sidebar=1) | ✅ |
+| `US14` | Sair ou retornar ao menu | [Diagrama](docs/diagramas/US14-diagrama-atividades.png) | — | ✅ |
 
 ---
 
@@ -143,8 +144,8 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US02` | Introdução da protagonista | [Diagrama](docs/diagramas/US02-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=8%3A6&show-proto-sidebar=1) | ⏳ |
-| `US03` | Transporte para 2007 | [Diagrama](docs/diagramas/US03-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/design/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo---FDS---Entrega-2?node-id=8-8&t=vSc3FPiyOPwirv8F-4) | ⏳ |
+| `US02` | Introdução da protagonista | [Diagrama](docs/diagramas/US02-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=8%3A6&show-proto-sidebar=1) | ✅ |
+| `US03` | Transporte para 2007 | [Diagrama](docs/diagramas/US03-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/design/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo---FDS---Entrega-2?node-id=8-8&t=vSc3FPiyOPwirv8F-4) | ✅ |
 
 ---
 
@@ -152,9 +153,9 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US04` | Caixa de diálogo com identificação do falante | [Diagrama](docs/diagramas/US04-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A42&show-proto-sidebar=1) | ⏳ |
-| `US05` | Avançar diálogos por comando | [Diagrama](docs/diagramas/US05-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A41&show-proto-sidebar=1) | ⏳ |
-| `US06` | Interagir com a IA durante a história | [Diagrama](docs/diagramas/US06-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=11%3A12&show-proto-sidebar=1) | ⏳ |
+| `US04` | Caixa de diálogo com identificação do falante | [Diagrama](docs/diagramas/US04-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A42&show-proto-sidebar=1) | ✅ |
+| `US05` | Avançar diálogos por comando | [Diagrama](docs/diagramas/US05-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A41&show-proto-sidebar=1) | ✅ |
+| `US06` | Interagir com a IA durante a história | [Diagrama](docs/diagramas/US06-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=11%3A12&show-proto-sidebar=1) | ✅ |
 
 ---
 
@@ -163,8 +164,8 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
 | `US07` | Escolhas alteram diálogos ou acontecimentos | [Diagrama](docs/diagramas/US07-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A14&show-proto-sidebar=1) | ⏳ |
-| `US15` | Desfecho influenciado pelas escolhas | — | — | ⏳ |
-| `US16` | Tela de encerramento | — | — | ⏳ |
+| `US15` | Desfecho influenciado pelas escolhas | [Diagrama](docs/diagramas/US15-diagrama-atividades.png) | — | ✅ |
+| `US16` | Tela de encerramento | [Diagrama](docs/diagramas/US16-diagrama-atividades.png) | — | ✅ |
 
 ---
 
@@ -172,9 +173,9 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US08` | Explorar o quarto da protagonista | [Diagrama](docs/diagramas/US08-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=ozYy6Xxx5UzFB3RU-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A5&show-proto-sidebar=1) | ⏳ |
+| `US08` | Explorar o quarto da protagonista | [Diagrama](docs/diagramas/US08-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=ozYy6Xxx5UzFB3RU-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A5&show-proto-sidebar=1) | ✅ |
 | `US09` | Cena no ambiente escolar | [Diagrama](docs/diagramas/US09-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A19&show-proto-sidebar=1) | ⏳ |
-| `US10` | Tecnologia e cultura dos anos 2000 | [Diagrama](docs/diagramas/US10-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A20&show-proto-sidebar=1) | ⏳ |
+| `US10` | Tecnologia e cultura dos anos 2000 | [Diagrama](docs/diagramas/US10-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A20&show-proto-sidebar=1) | ✅ |
 
 ---
 
@@ -182,7 +183,7 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US11` | Feedback visual em opções interativas | — | — | ⏳ |
+| `US11` | Feedback visual em opções interativas | [Diagrama](docs/diagramas/US11-diagrama-atividades.png) | — | ✅ |
 
 ---
 
@@ -190,8 +191,8 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US12` | Música ambiente por cena | — | — | ⏳ |
-| `US13` | Efeitos sonoros de interações e eventos | — | — | ⏳ |
+| `US12` | Música ambiente por cena | — | — | 🔄 |
+| `US13` | Efeitos sonoros de interações e eventos | [Diagrama](docs/diagramas/US13-eventos-sonoros-prioritarios.png) | — | 🔄 |
 
 ---
 
@@ -251,7 +252,7 @@ Ainda dentro de `entrega_pif/re7`:
 
 | Tecla | Ação |
 |---|---|
-| Mouse | Clicar nos botões do menu |
+| Mouse | Clicar nos botões do menu e nos objetos do quarto |
 | ESPAÇO | Avançar as falas |
 | ESC | Voltar ao menu (o progresso é salvo) |
 | Minigame (corrida) | ESPAÇO, W ou seta para cima para pular |
@@ -261,13 +262,41 @@ Ainda dentro de `entrega_pif/re7`:
 ### O que o jogo contém
 
 - **Menu principal:** Novo Jogo, Continuar (usa o save), Créditos e Sair.
-- **Missão jogável do início ao fim:** introdução em 2007, minigame de obstáculos com puzzle de 3 fases e epílogo.
+- **Missão jogável do início ao fim:** introdução em 2007, exploração do quarto, minigame de obstáculos com puzzle de 3 fases e epílogo.
 - **Tratamento de entradas inválidas:** feito com laço `while` na tela final.
 - **Game loop com encerramento controlado:** a tela final pergunta se o jogador quer jogar de novo ou sair.
 
 🎬 **Screencast:** [Assistir à demonstração](https://drive.google.com/file/d/1cgYbGEYNcb32-t48MkWrdA1o_scuL_fV/view?usp=sharing)
 
 O vídeo mostra o jogo rodando, o tratamento de erros em ação e a missão completa sendo jogada.
+
+---
+
+<a id="colaboracao"></a>
+# 🤝 Colaboração e evidências
+
+## Programação em pares
+
+Durante a sprint, a equipe realizou sessões de programação em pares, remotamente por chamada com compartilhamento de tela e presencialmente na faculdade. Os integrantes alternaram entre os papéis de **piloto**, responsável por escrever o código, e **navegador**, responsável por acompanhar a implementação, revisar e discutir soluções. Além dessas sessões, a equipe analisou o código em conjunto semanalmente.
+
+Este relato foi elaborado retrospectivamente, com base nas experiências dos participantes.
+
+## Contribuições das duplas
+
+| Dupla | Formato | Trabalho realizado |
+|---|---|---|
+| Vitória e Aline | Chamada com tela compartilhada | Implementação da US08: exploração do quarto em 2007. |
+| Juliana e Luiz Mario | Presencial, na faculdade | Implementação do reprodutor de áudio. |
+| Ana Rita e Luiz Mario | Presencial, na faculdade | Inserção dos áudios no código do jogo. |
+| Vitória e Luiz Mario | Chamada com tela compartilhada | Integração do reprodutor de áudio com o código da US08. |
+
+## Experiência e aprendizados
+
+A organização da US08 foi um ponto positivo do trabalho em dupla. O acompanhamento e o revezamento permitiram discutir a implementação durante o desenvolvimento.
+
+A principal dificuldade foi dividir a implementação dos sons entre diferentes duplas e integrar as partes ao jogo. Essa experiência indicou a necessidade de combinar previamente as responsabilidades e os pontos de integração do código.
+
+Para a próxima sprint, a proposta é registrar cada sessão com três informações: **dupla, tarefa realizada e resultado**, além de associar o trabalho à história e ao commit ou pull request correspondente.
 
 ---
 
@@ -323,7 +352,12 @@ O vídeo mostra o jogo rodando, o tratamento de erros em ação e a missão comp
 │   │   ├── US07-diagrama-atividades.png
 │   │   ├── US08-diagrama-atividades.png
 │   │   ├── US09-diagrama-atividades.png
-│   │   └── US10-diagrama-atividades.png
+│   │   ├── US10-diagrama-atividades.png
+│   │   ├── US11-diagrama-atividades.png
+│   │   ├── US13-eventos-sonoros-prioritarios.png
+│   │   ├── US14-diagrama-atividades.png
+│   │   ├── US15-diagrama-atividades.png
+│   │   └── US16-diagrama-atividades.png
 │   │
 │   └── 📁 prototipos
 │       ├── 📁 US01
@@ -349,6 +383,7 @@ O vídeo mostra o jogo rodando, o tratamento de erros em ação e a missão comp
 │       │   ├── scenes.c / scenes.h
 │       │   ├── story.c / story.h
 │       │   ├── minigame.c / minigame.h
+│       │   ├── room.c / room.h
 │       │   ├── ui.c / ui.h
 │       │   └── assets.c / assets.h
 │       ├── re7_novo.exe
