@@ -127,7 +127,9 @@ O desenvolvimento do projeto é acompanhado por meio das ferramentas de gerencia
 
 As histórias de usuário representam as principais funcionalidades e experiências previstas para o **Re:7**.
 
-Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as histórias possuem acesso aos seus respectivos diagramas de atividades e, quando existentes, protótipos Lo-Fi.
+Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as histórias possuem acesso aos seus respectivos diagramas de atividades protótipos Lo-Fi e, quando disponíveis, Hi-Fi.
+
+As telas e os fluxos estão organizados por história em [`docs/prototipos`](docs/prototipos/). As pastas US11 a US16 também possuem índices com os links dos protótipos e dos arquivos.
 
 **Status:** ⏳ A fazer • 🔄 Em andamento • ✅ Concluído
 
@@ -136,7 +138,7 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
 | `US01` | Iniciar novo jogo | [Diagrama](docs/diagramas/US01-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=11%3A10&show-proto-sidebar=1) / [Hi-Fi](https://drive.google.com/file/d/1xw17i9gdloGMo8wrCM0RVy36mNwig1Xm/view?usp=sharing) | ✅ |
-| `US14` | Sair ou retornar ao menu | [Diagrama](docs/diagramas/US14-diagrama-atividades.png) | [Hi-Fi](https://drive.google.com/file/d/1alnN_eCxFPP-PMcsIs-1eZtsNNcv9-dV/view?usp=sharing) | ✅ |
+| `US14` | Sair ou retornar ao menu | [Diagrama](docs/diagramas/US14-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo---FDS---Entrega-2?node-id=277-39&p=f&t=1PD0gciLPUfIR1Lr-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=277%3A39&show-proto-sidebar=1) / [Hi-Fi](https://drive.google.com/file/d/1alnN_eCxFPP-PMcsIs-1eZtsNNcv9-dV/view?usp=sharing) | ✅ |
 
 ---
 
@@ -164,8 +166,8 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
 | `US07` | Escolhas alteram diálogos ou acontecimentos | [Diagrama](docs/diagramas/US07-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A14&show-proto-sidebar=1) | ⏳ |
-| `US15` | Desfecho influenciado pelas escolhas | [Diagrama](docs/diagramas/US15-diagrama-atividades.png) | [Hi-Fi](https://drive.google.com/file/d/1xw17i9gdloGMo8wrCM0RVy36mNwig1Xm/view?usp=sharing) | ✅ |
-| `US16` | Tela de encerramento | [Diagrama](docs/diagramas/US16-diagrama-atividades.png) | [Hi-Fi](https://drive.google.com/file/d/11SMqcWYKV2sYlrRTrBKdvBf2th4eqQNh/view?usp=sharing) | ✅ |
+| `US15` | Desfecho influenciado pelas escolhas | [Diagrama](docs/diagramas/US15-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo---FDS---Entrega-2?node-id=277-43&p=f&t=1PD0gciLPUfIR1Lr-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=277%3A43&show-proto-sidebar=1) / [Hi-Fi](https://drive.google.com/file/d/1xw17i9gdloGMo8wrCM0RVy36mNwig1Xm/view?usp=sharing) | ✅ |
+| `US16` | Tela de encerramento | [Diagrama](docs/diagramas/US16-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo---FDS---Entrega-2?node-id=277-47&p=f&t=1PD0gciLPUfIR1Lr-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=277%3A47&show-proto-sidebar=1) / [Hi-Fi](https://drive.google.com/file/d/11SMqcWYKV2sYlrRTrBKdvBf2th4eqQNh/view?usp=sharing) | ✅ |
 
 ---
 
@@ -183,7 +185,7 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US11` | Feedback visual em opções interativas | [Diagrama](docs/diagramas/US11-diagrama-atividades.png) | [Hi-Fi](https://drive.google.com/file/d/1xw17i9gdloGMo8wrCM0RVy36mNwig1Xm/view?usp=sharing) | ✅ |
+| `US11` | Feedback visual em opções interativas | [Diagrama](docs/diagramas/US11-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo---FDS---Entrega-2?node-id=277-8&p=f&t=1PD0gciLPUfIR1Lr-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=277%3A8&show-proto-sidebar=1) / [Hi-Fi](https://drive.google.com/file/d/1xw17i9gdloGMo8wrCM0RVy36mNwig1Xm/view?usp=sharing) | ✅ |
 
 ---
 
@@ -191,8 +193,8 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US12` | Música ambiente por cena | [Diagrama](docs/diagramas/US12-diagrama-atividades.png) | [Hi-Fi](https://drive.google.com/file/d/1GI2XnuIXv_WsrAibHfJz-sT6ZhdGEibN/view?usp=sharing) | ✅ |
-| `US13` | Efeitos sonoros de interações e eventos | [Diagrama](docs/diagramas/US13-diagrama-atividades.png) | [Hi-Fi](https://drive.google.com/file/d/1GI2XnuIXv_WsrAibHfJz-sT6ZhdGEibN/view?usp=sharing) | ✅ |
+| `US12` | Música ambiente por cena | [Diagrama](docs/diagramas/US12-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo---FDS---Entrega-2?node-id=277-31&p=f&t=1PD0gciLPUfIR1Lr-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=277%3A31&show-proto-sidebar=1) / [Hi-Fi](https://drive.google.com/file/d/1GI2XnuIXv_WsrAibHfJz-sT6ZhdGEibN/view?usp=sharing) | ✅ |
+| `US13` | Efeitos sonoros de interações e eventos | [Diagrama](docs/diagramas/US13-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo---FDS---Entrega-2?node-id=277-35&p=f&t=1PD0gciLPUfIR1Lr-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=277%3A35&show-proto-sidebar=1) / [Hi-Fi](https://drive.google.com/file/d/1GI2XnuIXv_WsrAibHfJz-sT6ZhdGEibN/view?usp=sharing) | ✅ |
 
 ---
 
@@ -334,11 +336,10 @@ Para a próxima sprint, a proposta é registrar cada sessão com três informaç
 ```text
 📦 projeto
 ├── 📁 assets
-│   ├── 📁 evidencias
-│   │   ├── board.png
-│   │   └── backlog.png
-│   ├── 📁 screenshots
-│   └── logo.png
+│   ├── backlog.png
+│   ├── backlog1.png
+│   ├── logo_smalld.png
+│   └── [IMAGENS E EVIDÊNCIAS DO PROJETO]
 │
 ├── 📁 docs
 │   ├── 📁 diagramas
@@ -359,6 +360,7 @@ Para a próxima sprint, a proposta é registrar cada sessão com três informaç
 │   │   ├── US15-diagrama-atividades.png
 │   │   └── US16-diagrama-atividades.png
 │   │
+│   ├── 📁 screencasting
 │   └── 📁 prototipos
 │       ├── 📁 US01
 │       ├── 📁 US02
@@ -391,7 +393,8 @@ Para a próxima sprint, a proposta é registrar cada sessão com três informaç
 │       │   ├── minigame.c / minigame.h
 │       │   ├── room.c / room.h
 │       │   ├── ui.c / ui.h
-│       │   └── assets.c / assets.h
+│       │   ├── assets.c / assets.h
+│       │   └── audio_manager.c / audio_manager.h
 │       ├── re7_novo.exe
 │       ├── save.dat
 │       └── recorde.dat
@@ -414,7 +417,7 @@ Para a próxima sprint, a proposta é registrar cada sessão com três informaç
 * 🎥 **Screencast do Núcleo em C (PIF):** [Assistir demonstração](https://drive.google.com/file/d/1cgYbGEYNcb32-t48MkWrdA1o_scuL_fV/view?usp=sharing)
 * 📋 **Jira:** [Acessar Jira](https://csprj-adsr-2p-e2.atlassian.net/jira/software/c/projects/PI2/boards/2?atlOrigin=eyJpIjoiMWEwODM2MTk4OTJhNDA4NDliMWQ0OWIxOGRmMmU0NzciLCJwIjoiaiJ9)
 * 📋 **Trello:** [Acessar Board](https://trello.com/b/t0u8Iplf)
-* 💻 **Repositório:** [Acessar repositório](https://github.com/Vini-Lino/projeto2-squad2)
+* 💻 **Repositório:** [Acessar repositório](https://github.com/anaritamoura/projeto2-squad2)
 * 🎨 **Protótipo Lo-fi:** [Acessar no Figma](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo---FDS---Entrega-2?node-id=95-194&p=f&t=YOhw8Vmu5wDwYyXY-0&scaling=contain&content-scaling=fixed&page-id=95%3A101&starting-point-node-id=95%3A194&show-proto-sidebar=1)
 
 ---
