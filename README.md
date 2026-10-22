@@ -369,7 +369,13 @@ Para a próxima sprint, a proposta é registrar cada sessão com três informaç
 │       ├── 📁 US07
 │       ├── 📁 US08
 │       ├── 📁 US09
-│       └── 📁 US10
+│       ├── 📁 US10
+│       ├── 📁 US11
+│       ├── 📁 US12
+│       ├── 📁 US13
+│       ├── 📁 US14
+│       ├── 📁 US15
+│       └── 📁 US16
 │
 ├── 📁 entrega_pif
 │   └── 📁 re7
