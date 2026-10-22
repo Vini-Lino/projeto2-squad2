@@ -3,6 +3,8 @@
 #include "ui.h"
 #include "scenes.h"
 #include "minigame.h"
+#include "room.h"
+#include "audio_manager.h"
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
@@ -105,6 +107,66 @@ static float flashTimer = 0.0f;
 // Tempo restante da mensagem "opcao invalida" na tela final
 static float avisoInvalido = 0.0f;
 
+// Controles do painel de audio
+static Rectangle audioFechar = {1040, 80, 100, 45};
+static Rectangle audioAbrir = {1090, 18, 160, 44};
+static Rectangle audioTestar = {470, 430, 220, 55};
+static Rectangle audioMudo = {470, 500, 220, 55};
+static Rectangle sliderMusica = {400, 270, 400, 12};
+static Rectangle sliderEfeitos = {400, 360, 400, 12};
+
+// Tempo restante do aviso "som ligado" (F2)
+static float avisoSom = 0.0f;
+
+// Desenha um controle deslizante de volume
+static void DesenharSlider(Rectangle r, float valor, const char *titulo)
+{
+    DrawText(titulo, (int)r.x, (int)r.y - 32, 22, WHITE);
+
+    DrawRectangleRec(r, GRAY);
+
+    DrawRectangleRec(
+        (Rectangle){r.x, r.y, r.width * valor, r.height},
+        SKYBLUE
+    );
+
+    DrawCircle(
+        (int)(r.x + r.width * valor),
+        (int)(r.y + r.height / 2),
+        10,
+        WHITE
+    );
+}
+
+// Aviso de som no canto inferior direito
+static void DesenharAvisoSom(void)
+{
+    bool mutado = AudioManager_IsMuted();
+
+    if (!mutado && avisoSom <= 0.0f) return;
+
+    const char *texto = mutado ? "Som desligado (F2)" : "Som ligado";
+
+    int larguraTexto = MeasureText(texto, 18);
+
+    Rectangle caixa = {
+        (float)GetScreenWidth() - larguraTexto - 44.0f,
+        (float)GetScreenHeight() - 40.0f,
+        larguraTexto + 28.0f,
+        30.0f
+    };
+
+    DrawRectangleRounded(caixa, 0.4f, 8, Fade(BLACK, 0.65f));
+
+    DrawText(
+        texto,
+        (int)caixa.x + 14,
+        (int)caixa.y + 6,
+        18,
+        mutado ? (Color){ 255, 105, 200, 255 } : SKYBLUE
+    );
+}
+
 // Desenha uma personagem mantendo a proporcao da imagem.
 // altura: altura na tela | yTopo: posicao vertical | xDireita: borda direita
 static void DrawPersonagem(Texture2D tex, float altura, float yTopo, float xDireita)
@@ -173,6 +235,72 @@ static void DesenharAvatarIA(Assets *assets)
         0.0f,
         WHITE
     );
+}
+
+
+// =====================================================
+// MUSICA DE FUNDO
+// =====================================================
+
+static void AtualizarMusica(GameState *game)
+{
+    switch (game->currentScreen)
+    {
+        case SCREEN_MENU:
+        case SCREEN_CREDITS:
+            AudioManager_PlayMusic(MUSICA_RE7);
+            break;
+
+        case SCREEN_ENDING:
+            AudioManager_PlayMusic(MUSICA_FINAL);
+            break;
+
+        case SCREEN_ROOM:
+            AudioManager_PlayMusic(MUSICA_2007);
+            break;
+
+        case SCREEN_MINIGAME:
+            // A musica do minigame e controlada em minigame.c.
+            break;
+
+        case SCREEN_GAME:
+        {
+            Scene scene = GetScene(game->currentScene);
+            bool ultimaFala =
+                game->dialogueIndex >= scene.dialogueCount - 1;
+
+            switch (game->currentScene)
+            {
+                case SCENE_PRESENT:
+                    AudioManager_PlayMusic(
+                        ultimaFala ? MUSICA_VIAGEM : MUSICA_RE7
+                    );
+                    break;
+
+                case SCENE_2007:
+                case SCENE_2007_CHALLENGE:
+                    AudioManager_PlayMusic(MUSICA_2007);
+                    break;
+
+                case SCENE_2007_WIN:
+                    AudioManager_PlayMusic(
+                        ultimaFala ? MUSICA_RETORNO : MUSICA_VITORIA
+                    );
+                    break;
+
+                case SCENE_EPILOGUE:
+                    AudioManager_PlayMusic(MUSICA_EPILOGO);
+                    break;
+
+                default:
+                    break;
+            }
+            break;
+        }
+
+        default:
+            break;
+    }
 }
 
 
@@ -248,6 +376,79 @@ void UpdateGame(GameState *game)
     // o flash de viagem no tempo vai se apagando
     if (flashTimer > 0.0f) flashTimer -= GetFrameTime();
 
+    // F2 liga e desliga o som em qualquer tela
+    if (IsKeyPressed(KEY_F2))
+    {
+        AudioManager_ToggleMute();
+        avisoSom = 1.5f;
+    }
+
+    if (avisoSom > 0.0f)
+        avisoSom -= GetFrameTime();
+
+    // Atualiza a musica de fundo
+    AudioManager_Update();
+    AtualizarMusica(game);
+
+    // Botao Volume abre as configuracoes nas telas jogaveis.
+    if ((game->currentScreen == SCREEN_GAME ||
+         game->currentScreen == SCREEN_ROOM ||
+         game->currentScreen == SCREEN_MINIGAME) &&
+        IsMouseButtonPressed(MOUSE_BUTTON_LEFT) &&
+        CheckCollisionPointRec(GetMousePosition(), audioAbrir))
+    {
+        game->audioReturnScreen = game->currentScreen;
+        game->currentScreen = SCREEN_AUDIO;
+        AudioManager_Play(SOM_MOUSE);
+        return;
+    }
+
+    // Painel de configuracoes de audio
+    if (game->currentScreen == SCREEN_AUDIO)
+    {
+        Vector2 mouse = GetMousePosition();
+
+        if (IsKeyPressed(KEY_ESCAPE) ||
+            (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) &&
+             CheckCollisionPointRec(mouse, audioFechar)))
+        {
+            game->currentScreen = game->audioReturnScreen;
+            return;
+        }
+
+        if (IsMouseButtonDown(MOUSE_BUTTON_LEFT))
+        {
+            if (CheckCollisionPointRec(mouse, sliderMusica))
+            {
+                float volume = (mouse.x - sliderMusica.x) /
+                               sliderMusica.width;
+                AudioManager_SetMusicVolume(volume);
+            }
+
+            if (CheckCollisionPointRec(mouse, sliderEfeitos))
+            {
+                float volume = (mouse.x - sliderEfeitos.x) /
+                               sliderEfeitos.width;
+                AudioManager_SetEffectsVolume(volume);
+            }
+        }
+
+        if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) &&
+            CheckCollisionPointRec(mouse, audioMudo))
+        {
+            AudioManager_ToggleMusicMute();
+            AudioManager_Play(SOM_MOUSE);
+        }
+
+        if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) &&
+            CheckCollisionPointRec(mouse, audioTestar))
+        {
+            AudioManager_Play(SOM_MOUSE);
+        }
+
+        return;
+    }
+
     // -------------------------------------------------
     // MENU
     // -------------------------------------------------
@@ -256,11 +457,14 @@ void UpdateGame(GameState *game)
     {
         if (IsButtonClicked(menuRects[0]))          // Novo Jogo
         {
+            AudioManager_Play(SOM_MOUSE);
             ComecarNovoJogo(game);
         }
 
         if (IsButtonClicked(menuRects[1]))          // Continuar
         {
+            AudioManager_Play(SOM_MOUSE);
+            
             // carrega o save; se nao houver, comeca do inicio
             if (!LoadGame(game))
             {
@@ -274,11 +478,15 @@ void UpdateGame(GameState *game)
 
         if (IsButtonClicked(menuRects[2]))          // Creditos
         {
+            AudioManager_Play(SOM_MOUSE);
+            
             game->currentScreen = SCREEN_CREDITS;
         }
 
         if (IsButtonClicked(menuRects[3]))          // Sair
         {
+            AudioManager_Play(SOM_MOUSE);
+            
             game->shouldExit = true;
         }
 
@@ -377,6 +585,31 @@ void UpdateGame(GameState *game)
 
 
     // -------------------------------------------------
+    // EXPLORACAO DO QUARTO
+    // -------------------------------------------------
+
+    if (game->currentScreen == SCREEN_ROOM)
+    {
+        RoomResult resultadoQuarto = UpdateRoom();
+
+        if (resultadoQuarto == ROOM_MENU)  // ESC
+        {
+            SaveGame(game);
+            game->currentScreen = SCREEN_MENU;
+        }
+        else if (resultadoQuarto == ROOM_CONCLUIDO)
+        {
+            // Fim da exploracao: inicia a conversa sobre o desafio
+            game->currentScreen = SCREEN_GAME;
+            ChangeScene(game, SCENE_2007_CHALLENGE);
+            SaveGame(game);
+        }
+
+        return;
+    }
+
+
+    // -------------------------------------------------
     // JOGO (HISTORIA)
     // -------------------------------------------------
 
@@ -402,8 +635,21 @@ void UpdateGame(GameState *game)
             {
                 if (game->currentScene == SCENE_2007)
                 {
-                    // fim da cena de 2007: comeca o minigame.
-                    // O save fica na ultima fala, para o Continuar voltar aqui.
+                    // Fim dos dialogos iniciais: abre a exploracao do quarto.
+                    game->dialogueIndex = scene.dialogueCount - 1;
+
+                    SaveGame(game);
+
+                    InitRoom();
+
+                    game->currentScreen = SCREEN_ROOM;
+
+                    return;
+                }
+
+                if (game->currentScene == SCENE_2007_CHALLENGE)
+                {
+                    // Fim dos dialogos do desafio: inicia o minigame.
                     game->dialogueIndex = scene.dialogueCount - 1;
 
                     SaveGame(game);
@@ -441,6 +687,21 @@ void UpdateGame(GameState *game)
 }
 
 
+// Botao de acesso ao painel de audio, desenhado por cima da tela atual.
+void DrawAudioButton(GameState *game)
+{
+    if (game->currentScreen != SCREEN_GAME &&
+        game->currentScreen != SCREEN_ROOM &&
+        game->currentScreen != SCREEN_MINIGAME)
+        return;
+
+    DrawRectangleRounded(audioAbrir, 0.25f, 8, (Color){25, 35, 65, 230});
+    DrawRectangleRoundedLines(audioAbrir, 0.25f, 8, SKYBLUE);
+    DrawText("♪ VOLUME", (int)audioAbrir.x + 20,
+             (int)audioAbrir.y + 12, 18, WHITE);
+}
+
+
 // =====================================================
 // DESENHAR JOGO
 // =====================================================
@@ -450,6 +711,47 @@ void DrawGame(
     Assets *assets
 )
 {
+
+    // Painel de configuracoes de audio
+    if (game->currentScreen == SCREEN_AUDIO)
+    {
+        DrawRectangle(
+            0, 0,
+            GetScreenWidth(), GetScreenHeight(),
+            (Color){15, 15, 35, 245}
+        );
+
+        DrawText("CONFIGURACOES DE AUDIO",
+                 350, 100, 32, WHITE);
+
+        DesenharSlider(
+            sliderMusica,
+            AudioManager_GetMusicVolume(),
+            "Volume da musica"
+        );
+
+        DesenharSlider(
+            sliderEfeitos,
+            AudioManager_GetEffectsVolume(),
+            "Volume dos efeitos"
+        );
+
+        DrawRectangleRec(audioTestar, DARKBLUE);
+        DrawText("TESTAR EFEITO", 500, 447, 20, WHITE);
+
+        DrawRectangleRec(audioMudo, DARKPURPLE);
+        DrawText(
+            AudioManager_IsMusicMuted()
+                ? "REATIVAR MUSICA"
+                : "SILENCIAR MUSICA",
+            485, 517, 18, WHITE
+        );
+
+        DrawRectangleRec(audioFechar, MAROON);
+        DrawText("FECHAR", 1055, 93, 18, WHITE);
+
+        return;
+    }
 
     // -------------------------------------------------
     // MENU
@@ -559,6 +861,17 @@ void DrawGame(
 
 
     // -------------------------------------------------
+    // EXPLORACAO DO QUARTO
+    // -------------------------------------------------
+
+    if (game->currentScreen == SCREEN_ROOM)
+    {
+        DrawRoom(assets);
+        return;
+    }
+
+
+    // -------------------------------------------------
     // MINIGAME
     // -------------------------------------------------
 
@@ -585,6 +898,7 @@ void DrawGame(
                 break;
 
             case SCENE_2007:
+            case SCENE_2007_CHALLENGE:
             case SCENE_2007_WIN:
                 background = assets->bg2007;
                 break;
@@ -618,7 +932,11 @@ void DrawGame(
         // Personagem: Lia adulta no presente, Lia jovem em 2007
         // (altura, posicao Y do topo, borda direita)
 
-        if (game->currentScene == SCENE_2007 || game->currentScene == SCENE_2007_WIN)
+        if (
+            game->currentScene == SCENE_2007 ||
+            game->currentScene == SCENE_2007_CHALLENGE ||
+            game->currentScene == SCENE_2007_WIN
+        )
         {
             DrawPersonagem(assets->liaJovemLado, 900.0f, -101.0f, 1250.0f);
         }
@@ -667,6 +985,9 @@ void DrawGame(
         // ---------------------------------------------
 
         DesenharFlash();
+
+        // Exibe o aviso de som por cima da tela atual
+        DesenharAvisoSom();
     }
 
 

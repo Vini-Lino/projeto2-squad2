@@ -78,8 +78,16 @@ Dialogue room2007Dialogues[] =
     {
         "IA",
         "E eu posso errar. Confira sempre o que eu disser."
-    },
+    }
+};
 
+
+// =====================================================
+// CENA: 2007 - EXPLICAÇÃO DO DESAFIO
+// =====================================================
+
+Dialogue room2007ChallengeDialogues[] =
+{
     {
         "IA",
         "Primeiro desafio: atravessar a rede do seu PC antigo."
@@ -165,6 +173,11 @@ int GetPresentDialogueCount(void)
 int GetRoom2007DialogueCount(void)
 {
     return sizeof(room2007Dialogues) / sizeof(room2007Dialogues[0]);
+}
+
+int GetRoom2007ChallengeDialogueCount(void)
+{
+    return sizeof(room2007ChallengeDialogues) / sizeof(room2007ChallengeDialogues[0]);
 }
 
 int GetRoom2007WinDialogueCount(void)
