@@ -135,8 +135,8 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US01` | Iniciar novo jogo | [Diagrama](docs/diagramas/US01-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=11%3A10&show-proto-sidebar=1) | ✅ |
-| `US14` | Sair ou retornar ao menu | [Diagrama](docs/diagramas/US14-diagrama-atividades.png) | — | ✅ |
+| `US01` | Iniciar novo jogo | [Diagrama](docs/diagramas/US01-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=11%3A10&show-proto-sidebar=1) / [Hi-Fi](https://drive.google.com/file/d/1xw17i9gdloGMo8wrCM0RVy36mNwig1Xm/view?usp=sharing) | ✅ |
+| `US14` | Sair ou retornar ao menu | [Diagrama](docs/diagramas/US14-diagrama-atividades.png) | [Hi-Fi](https://drive.google.com/file/d/1alnN_eCxFPP-PMcsIs-1eZtsNNcv9-dV/view?usp=sharing) | ✅ |
 
 ---
 
@@ -144,8 +144,8 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US02` | Introdução da protagonista | [Diagrama](docs/diagramas/US02-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=8%3A6&show-proto-sidebar=1) | ✅ |
-| `US03` | Transporte para 2007 | [Diagrama](docs/diagramas/US03-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/design/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo---FDS---Entrega-2?node-id=8-8&t=vSc3FPiyOPwirv8F-4) | ✅ |
+| `US02` | Introdução da protagonista | [Diagrama](docs/diagramas/US02-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=8%3A6&show-proto-sidebar=1) / [Hi-Fi](https://drive.google.com/file/d/1xw17i9gdloGMo8wrCM0RVy36mNwig1Xm/view?usp=sharing) | ✅ |
+| `US03` | Transporte para 2007 | [Diagrama](docs/diagramas/US03-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/design/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo---FDS---Entrega-2?node-id=8-8&t=vSc3FPiyOPwirv8F-4) / [Hi-Fi](https://drive.google.com/file/d/1xw17i9gdloGMo8wrCM0RVy36mNwig1Xm/view?usp=sharing) | ✅ |
 
 ---
 
@@ -153,9 +153,9 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US04` | Caixa de diálogo com identificação do falante | [Diagrama](docs/diagramas/US04-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A42&show-proto-sidebar=1) | ✅ |
-| `US05` | Avançar diálogos por comando | [Diagrama](docs/diagramas/US05-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A41&show-proto-sidebar=1) | ✅ |
-| `US06` | Interagir com a IA durante a história | [Diagrama](docs/diagramas/US06-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=11%3A12&show-proto-sidebar=1) | ✅ |
+| `US04` | Caixa de diálogo com identificação do falante | [Diagrama](docs/diagramas/US04-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A42&show-proto-sidebar=1) / [Hi-Fi](https://drive.google.com/file/d/1xw17i9gdloGMo8wrCM0RVy36mNwig1Xm/view?usp=sharing) | ✅ |
+| `US05` | Avançar diálogos por comando | [Diagrama](docs/diagramas/US05-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A41&show-proto-sidebar=1) / [Hi-Fi](https://drive.google.com/file/d/1xw17i9gdloGMo8wrCM0RVy36mNwig1Xm/view?usp=sharing) | ✅ |
+| `US06` | Interagir com a IA durante a história | [Diagrama](docs/diagramas/US06-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=11%3A12&show-proto-sidebar=1) / [Hi-Fi](https://drive.google.com/file/d/1xw17i9gdloGMo8wrCM0RVy36mNwig1Xm/view?usp=sharing) | ✅ |
 
 ---
 
@@ -164,8 +164,8 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
 | `US07` | Escolhas alteram diálogos ou acontecimentos | [Diagrama](docs/diagramas/US07-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A14&show-proto-sidebar=1) | ⏳ |
-| `US15` | Desfecho influenciado pelas escolhas | [Diagrama](docs/diagramas/US15-diagrama-atividades.png) | — | ✅ |
-| `US16` | Tela de encerramento | [Diagrama](docs/diagramas/US16-diagrama-atividades.png) | — | ✅ |
+| `US15` | Desfecho influenciado pelas escolhas | [Diagrama](docs/diagramas/US15-diagrama-atividades.png) | [Hi-Fi](https://drive.google.com/file/d/1xw17i9gdloGMo8wrCM0RVy36mNwig1Xm/view?usp=sharing) | ✅ |
+| `US16` | Tela de encerramento | [Diagrama](docs/diagramas/US16-diagrama-atividades.png) | [Hi-Fi](https://drive.google.com/file/d/11SMqcWYKV2sYlrRTrBKdvBf2th4eqQNh/view?usp=sharing) | ✅ |
 
 ---
 
@@ -173,9 +173,9 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US08` | Explorar o quarto da protagonista | [Diagrama](docs/diagramas/US08-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=ozYy6Xxx5UzFB3RU-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A5&show-proto-sidebar=1) | ✅ |
+| `US08` | Explorar o quarto da protagonista | [Diagrama](docs/diagramas/US08-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=ozYy6Xxx5UzFB3RU-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A5&show-proto-sidebar=1) / [Hi-Fi](https://drive.google.com/file/d/1xw17i9gdloGMo8wrCM0RVy36mNwig1Xm/view?usp=sharing) | ✅ |
 | `US09` | Cena no ambiente escolar | [Diagrama](docs/diagramas/US09-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A19&show-proto-sidebar=1) | ⏳ |
-| `US10` | Tecnologia e cultura dos anos 2000 | [Diagrama](docs/diagramas/US10-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A20&show-proto-sidebar=1) | ✅ |
+| `US10` | Tecnologia e cultura dos anos 2000 | [Diagrama](docs/diagramas/US10-diagrama-atividades.png) | [Lo-Fi](https://www.figma.com/proto/SOWkT7Av6D6rrZESX9XgtQ/Prot%C3%B3tipo-FDS-Entrega-2?node-id=0-1&p=f&t=vSc3FPiyOPwirv8F-0&scaling=contain&content-scaling=fixed&starting-point-node-id=9%3A20&show-proto-sidebar=1) / [Hi-Fi](https://drive.google.com/file/d/1xw17i9gdloGMo8wrCM0RVy36mNwig1Xm/view?usp=sharing) | ✅ |
 
 ---
 
@@ -183,7 +183,7 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US11` | Feedback visual em opções interativas | [Diagrama](docs/diagramas/US11-diagrama-atividades.png) | — | ✅ |
+| `US11` | Feedback visual em opções interativas | [Diagrama](docs/diagramas/US11-diagrama-atividades.png) | [Hi-Fi](https://drive.google.com/file/d/1xw17i9gdloGMo8wrCM0RVy36mNwig1Xm/view?usp=sharing) | ✅ |
 
 ---
 
@@ -191,8 +191,8 @@ Para garantir a rastreabilidade entre requisitos, modelagem e prototipação, as
 
 | Story | Descrição | Modelagem | Protótipo | Status |
 |---|---|:---:|:---:|:---:|
-| `US12` | Música ambiente por cena | — | — | 🔄 |
-| `US13` | Efeitos sonoros de interações e eventos | [Diagrama](docs/diagramas/US13-eventos-sonoros-prioritarios.png) | — | 🔄 |
+| `US12` | Música ambiente por cena | [Diagrama](docs/diagramas/US12-diagrama-atividades.png) | [Hi-Fi](https://drive.google.com/file/d/1GI2XnuIXv_WsrAibHfJz-sT6ZhdGEibN/view?usp=sharing) | ✅ |
+| `US13` | Efeitos sonoros de interações e eventos | [Diagrama](docs/diagramas/US13-diagrama-atividades.png) | [Hi-Fi](https://drive.google.com/file/d/1GI2XnuIXv_WsrAibHfJz-sT6ZhdGEibN/view?usp=sharing) | ✅ |
 
 ---
 
@@ -353,7 +353,8 @@ Para a próxima sprint, a proposta é registrar cada sessão com três informaç
 │   │   ├── US09-diagrama-atividades.png
 │   │   ├── US10-diagrama-atividades.png
 │   │   ├── US11-diagrama-atividades.png
-│   │   ├── US13-eventos-sonoros-prioritarios.png
+│   │   ├── US12-diagrama-atividades.png
+│   │   ├── US13-diagrama-atividades.png
 │   │   ├── US14-diagrama-atividades.png
 │   │   ├── US15-diagrama-atividades.png
 │   │   └── US16-diagrama-atividades.png
