@@ -334,7 +334,7 @@ Para a próxima sprint, a proposta é registrar cada sessão com três informaç
 # 📁 Organização do Repositório
 
 ```text
-📦 projeto
+📦 projeto2-squad2
 ├── 📁 assets
 │   ├── backlog.png
 │   ├── backlog1.png
@@ -361,6 +361,7 @@ Para a próxima sprint, a proposta é registrar cada sessão com três informaç
 │   │   └── US16-diagrama-atividades.png
 │   │
 │   ├── 📁 screencasting
+│   │   └── screencast.MOV
 │   └── 📁 prototipos
 │       ├── 📁 US01
 │       ├── 📁 US02
@@ -384,7 +385,11 @@ Para a próxima sprint, a proposta é registrar cada sessão com três informaç
 │       ├── 📁 assets
 │       │   ├── 📁 backgrounds
 │       │   ├── 📁 characters
+│       │   ├── 📁 music
+│       │   ├── 📁 sounds
 │       │   └── 📁 ui
+│       ├── 📁 docs
+│       │   └── documentacao_audio.md
 │       ├── 📁 src
 │       │   ├── main.c
 │       │   ├── game.c / game.h
@@ -395,15 +400,16 @@ Para a próxima sprint, a proposta é registrar cada sessão com três informaç
 │       │   ├── ui.c / ui.h
 │       │   ├── assets.c / assets.h
 │       │   └── audio_manager.c / audio_manager.h
+│       ├── re7.exe
 │       ├── re7_novo.exe
 │       ├── save.dat
 │       └── recorde.dat
 │
 ├── 📁 src
-│   └── [ARQUIVOS DO CÓDIGO]
+│   └── test.gitkeep
 │
-├── README.md
-└── [OUTROS ARQUIVOS]
+├── .gitignore
+└── README.md
 ```
 
 ---
