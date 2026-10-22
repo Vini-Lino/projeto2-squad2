@@ -15,7 +15,9 @@ typedef enum
     SCREEN_GAME,
     SCREEN_CREDITS,
     SCREEN_MINIGAME,
-    SCREEN_ENDING
+    SCREEN_ENDING,
+    SCREEN_ROOM,
+    SCREEN_AUDIO
 } GameScreen;
 
 
@@ -30,6 +32,8 @@ typedef struct
 
     int dialogueIndex;
 
+    GameScreen audioReturnScreen;
+
     bool shouldExit;
 
 } GameState;
@@ -40,6 +44,8 @@ typedef struct
 void InitGame(GameState *game);
 
 void UpdateGame(GameState *game);
+
+void DrawAudioButton(GameState *game);
 
 void DrawGame(
     GameState *game,

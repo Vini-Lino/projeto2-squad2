@@ -15,6 +15,7 @@
  */
 
 #include "minigame.h"
+#include "audio_manager.h"
 
 #include "raylib.h"
 #include <stdbool.h>
@@ -485,6 +486,9 @@ static void DesenharPuzzle(const Puzzle *sala, int fase)
 /* Prepara o minigame para comecar do zero */
 void InitMinigame(void)
 {
+    // Inicia a musica de aventura do minigame
+    AudioManager_PlayMusic(MUSICA_AVENTURA);
+    
     SetRandomSeed((unsigned int)time(NULL));
 
     recorde = CarregarRecorde();
@@ -547,6 +551,9 @@ MinigameResult UpdateMinigame(void)
             faseAtual++;
             if (faseAtual > TOTAL_FASES) {
                 tela = TELA_VITORIA;
+
+                // Inicia a musica de vitoria
+                AudioManager_PlayMusic(MUSICA_VITORIA);
             } else {
                 CarregarFase(faseAtual, &puzzle);
             }

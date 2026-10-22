@@ -37,6 +37,19 @@ Scene GetScene(SceneID id)
         }
 
 
+        case SCENE_2007_CHALLENGE:
+        {
+            Scene scene =
+            {
+                room2007ChallengeDialogues,
+                GetRoom2007ChallengeDialogueCount(),
+                SCENE_2007_WIN
+            };
+
+            return scene;
+        }
+
+
         case SCENE_2007_WIN:
         {
             Scene scene =
